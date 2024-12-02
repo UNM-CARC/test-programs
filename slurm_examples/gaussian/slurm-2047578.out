@@ -1,0 +1,19 @@
+Gaussian scratch directory (GAUSS_SCRDIR) set to /carc/scratch/users/mfricke/
+Parallelizing 2 processes across hopper001,hopper002 nodes.
+ntsnet: using executable file /opt/local/gaussian/g16/C.01/avx2/g16/linda-exe/l302.exel
+ntsnet: trying to schedule 1 worker
+ntsnet: scheduled a total of 1 worker
+ntsnet: starting master process on hopper001
+ntsnet: starting 1 worker on hopper002
+ntsnet: using executable file /opt/local/gaussian/g16/C.01/avx2/g16/linda-exe/l401.exel
+ntsnet: trying to schedule 1 worker
+ntsnet: scheduled a total of 1 worker
+ntsnet: starting master process on hopper001
+ntsnet: starting 1 worker on hopper002
+ntsnet: using executable file /opt/local/gaussian/g16/C.01/avx2/g16/linda-exe/l502.exel
+ntsnet: trying to schedule 1 worker
+ntsnet: scheduled a total of 1 worker
+ntsnet: starting master process on hopper001
+ntsnet: starting 1 worker on hopper002
+slurmstepd: error: *** JOB 2047578 ON hopper001 CANCELLED AT 2023-09-12T13:21:15 ***
+Connection to hopper002 closed by remote host.

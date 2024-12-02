@@ -1,0 +1,16 @@
+#include "PBGLGraph.hpp"
+// Construct a graph with the vertices container as a vector
+
+enum vertex_properties {Bob, Tod, Rob, Jeb, Sue, Ann, Mae, Rea};
+enum edge_properties {Son, Daughter, Mother, Father};
+
+int main()
+{
+  //Create a graph
+  Graph<vertex_properties, edge_properties> g;
+  
+  g.AddVertex(Bob);
+
+  // Program completed
+  return 0;
+}

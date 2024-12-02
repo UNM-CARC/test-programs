@@ -1,0 +1,15 @@
+STEPS
+1. Relax the system to a converged geometry (ISIF=3 or ISIF=2)
+2. cp CONTCAR to POSCAR and perform static calculation i.e. NO optimization (NSW=0, IBRION=-1, delete ISIF) and use the follow tag 
+   LAECHG=.TRUE.
+3. Sum the output charge files AECCAR0 AECCAR2 using the the chgsum.pl script. Output the sum to CHGCAR_sum file:
+    ./chgsum.pl AECCAR0 AECCAR2 
+4. Run the Bader charge analysis to CHGCAR output from step#3.
+   ./bader CHGCAR -ref CHGCAR_sum
+
+Charges will be in the file AFC.dat
+
+For steps 3 you will need script chgsum.pl (in this folder)
+
+For step 4 you will need "bader" binary from this page:
+http://theory.cm.utexas.edu/henkelman/code/bader/

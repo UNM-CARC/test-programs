@@ -1,0 +1,125 @@
+ running on   32 total cores
+ distrk:  each k-point on   32 cores,    1 groups
+ distr:  one band on    8 cores,    4 groups
+ using from now: INCAR     
+ vasp.6.1.0 28Jan20 (build Oct 20 2020 21:06:44) complex                        
+  
+ POSCAR found type information on POSCAR N 
+ POSCAR found :  1 types and       2 ions
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     You use a magnetic or noncollinear calculation, but did not specify     |
+|     the initial magnetic moment with the MAGMOM tag. Note that a            |
+|     default of 1 will be used for all atoms. This ferromagnetic setup       |
+|     may break the symmetry of the crystal, in particular it may rule        |
+|     out finding an antiferromagnetic solution. Thence, we recommend         |
+|     setting the initial magnetic moment manually or verifying carefully     |
+|     that this magnetic setup is desired.                                    |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+ scaLAPACK will be used
+ -----------------------------------------------------------------------------
+|                                                                             |
+|               ----> ADVICE to this user running VASP <----                  |
+|                                                                             |
+|     You have switched on vdW-DFT.                                           |
+|     This routine was written and supplied by Jiri Klimes. We recommend      |
+|     that you carefully read and cite the following publications:            |
+|       J. Klimes, D.R. Bowler, A. Michelides                                 |
+|          J. Phys.: Cond Matt. 22 022201 (2010)                              |
+|       J. Klimes, D.R. Bowler, A. Michelides                                 |
+|          Phys. Rev. B. 83, 195131 (2011)                                    |
+|     and references therein.                                                 |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+ -----------------------------------------------------------------------------
+|                                                                             |
+|               ----> ADVICE to this user running VASP <----                  |
+|                                                                             |
+|     You have a (more or less) 'small supercell' and for smaller cells       |
+|     it is recommended to use the reciprocal-space projection scheme!        |
+|     The real-space optimization is not efficient for small cells and it     |
+|     is also less accurate ...                                               |
+|     Therefore, set LREAL=.FALSE. in the INCAR file.                         |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+ -----------------------------------------------------------------------------
+|                                                                             |
+|               ----> ADVICE to this user running VASP <----                  |
+|                                                                             |
+|     You enforced a specific xc type in the INCAR file but a different       |
+|     type was found in the POTCAR file.                                      |
+|     I HOPE YOU KNOW WHAT YOU ARE DOING!                                     |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+ LDA part: xc-table for Pade appr. of Perdew
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+Total vdW correction in eV:      2.5410359
+DAV:   1     0.782124949919E+02    0.78212E+02   -0.16761E+03    72   0.262E+02
+DAV:   2    -0.320683159665E+01   -0.81419E+02   -0.75098E+02    88   0.972E+01
+DAV:   3    -0.136299933013E+02   -0.10423E+02   -0.10418E+02    64   0.500E+01
+DAV:   4    -0.137608055429E+02   -0.13081E+00   -0.13010E+00    64   0.754E+00
+DAV:   5    -0.137631844114E+02   -0.23789E-02   -0.23788E-02    72   0.743E-01    0.114E+01
+Total vdW correction in eV:      2.5612629
+DAV:   6    -0.131287943225E+02    0.63439E+00   -0.19243E+00    48   0.726E+00    0.534E+00
+Total vdW correction in eV:      2.5726939
+DAV:   7    -0.133580290278E+02   -0.22923E+00   -0.53695E-01    48   0.388E+00    0.300E+00
+Total vdW correction in eV:      2.5834761
+DAV:   8    -0.134092145196E+02   -0.51185E-01   -0.17414E-01    56   0.259E+00    0.111E+00
+Total vdW correction in eV:      2.5852598
+DAV:   9    -0.134274531207E+02   -0.18239E-01   -0.90854E-03    48   0.793E-01    0.519E-01
+Total vdW correction in eV:      2.5856818
+DAV:  10    -0.134307333836E+02   -0.32803E-02   -0.42699E-03    56   0.396E-01    0.323E-01
+Total vdW correction in eV:      2.5862196
+DAV:  11    -0.134341320336E+02   -0.33987E-02   -0.47623E-04    56   0.179E-01    0.281E-01
+Total vdW correction in eV:      2.5874172
+DAV:  12    -0.134439864451E+02   -0.98544E-02   -0.11270E-03    52   0.254E-01    0.196E-01
+Total vdW correction in eV:      2.5882309
+DAV:  13    -0.134509856332E+02   -0.69992E-02   -0.16763E-03    52   0.292E-01    0.113E-01
+Total vdW correction in eV:      2.5879258
+DAV:  14    -0.134538887730E+02   -0.29031E-02   -0.65737E-04    48   0.172E-01    0.725E-02
+Total vdW correction in eV:      2.5871653
+DAV:  15    -0.134557459859E+02   -0.18572E-02   -0.40353E-04    52   0.120E-01    0.414E-02
+Total vdW correction in eV:      2.5869265
+DAV:  16    -0.134564041628E+02   -0.65818E-03   -0.62822E-05    52   0.529E-02    0.337E-02
+Total vdW correction in eV:      2.5867253
+DAV:  17    -0.134572824231E+02   -0.87826E-03   -0.76236E-05    48   0.586E-02    0.243E-02
+Total vdW correction in eV:      2.5865998
+DAV:  18    -0.134573841362E+02   -0.10171E-03   -0.43516E-05    48   0.460E-02    0.172E-02
+Total vdW correction in eV:      2.5866412
+DAV:  19    -0.134574058956E+02   -0.21759E-04   -0.95067E-06    52   0.234E-02    0.125E-02
+Total vdW correction in eV:      2.5867973
+DAV:  20    -0.134573933256E+02    0.12570E-04   -0.17466E-05    48   0.308E-02    0.465E-03
+Total vdW correction in eV:      2.5868502
+DAV:  21    -0.134574077369E+02   -0.14411E-04   -0.69219E-06    48   0.235E-02    0.181E-03
+Total vdW correction in eV:      2.5868565
+DAV:  22    -0.134574758715E+02   -0.68135E-04   -0.35691E-06    52   0.162E-02    0.955E-04
+Total vdW correction in eV:      2.5868557
+DAV:  23    -0.134575008764E+02   -0.25005E-04   -0.19685E-06    48   0.107E-02    0.576E-04
+Total vdW correction in eV:      2.5868527
+DAV:  24    -0.134575309704E+02   -0.30094E-04   -0.17577E-06    48   0.789E-03    0.337E-04
+Total vdW correction in eV:      2.5868499
+DAV:  25    -0.134575446430E+02   -0.13673E-04   -0.53331E-07    48   0.542E-03    0.206E-04
+Total vdW correction in eV:      2.5868488
+DAV:  26    -0.134575488132E+02   -0.41701E-05   -0.18902E-07    52   0.362E-03
+Total vdW correction in eV:      2.5868494
+Total vdW correction in eV:      2.5868490
+   1 F= -.13457549E+02 E0= -.13457549E+02  d E =-.134575E+02  mag=     0.0000
+ curvature:   0.00 expect dE= 0.000E+00 dE for cont linesearch  0.000E+00
+ trial: gam= 0.00000 g(F)=  0.291E+01 g(S)=  0.000E+00 ort = 0.000E+00 (trialstep = 0.100E+01)
+ search vector abs. value=  0.291E+01

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#SBATCH --job-name=slurm_test
+#SBATCH --output=output.txt
+#SBATCH --ntasks=16
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=32
+#SBATCH --time=00:05:00
+#SBATCH --mail-type=All
+#SBATCH --mail-user=mfricke@carc.unm.edu
+#SBATCH --partition=tc
+
+module load openmpi-4.0.1-intel-19.0.4-python2-3rvw5kz
+srun sieve 10000000000

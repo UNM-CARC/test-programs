@@ -1,0 +1,38 @@
+#!/bin/bash
+## Introductory Example 
+## Copyright (c) 2018
+## The Center for Advanced Research Computing
+## at The University of New Mexico
+####################################################
+
+#PBS -l nodes=2:ppn=4
+#PBS -l walltime=1:00:00
+#PBS -q debug 
+
+# Change to directory the PBS script was submitted from
+cd $PBS_O_WORKDIR
+
+# load the environment module to use OpenMPI built with the Intel compilers
+#module load openfoam-2012-intel-19.1.1-mkl-dlupzju 
+
+module load openfoam-2012-gcc-10.2.0-mkl-23wrqj2 
+
+# print out a hello message from each of the processors on this host
+# indicating the host this is running on
+#export THIS_HOST=$(hostname)
+
+# mpirun -np 16 -machinefile $PBS_NODEFILE echo Hello World from host $THIS_HOST
+
+blockMesh &> log.blockMesh
+#icoFoam &> log.icoFoam
+
+decomposePar &> log.decomposePar
+
+#mpirun -np 2 -machinefile $PBS_NODEFILE icoFoam -parallel &> log.icoFoam
+icoFoam &> log.icoFoam
+
+reconstructPar &> log.reconstructPar
+
+#touch cavity.foam
+
+###################################################

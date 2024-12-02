@@ -1,0 +1,13 @@
+To request GPUs, add --gpus-per-node X or --gpus X, where X is the desired number of GPUs.
+Abort(2664079) on node 7 (rank 7 in comm 0): Fatal error in PMPI_Init: Other MPI error, error stack:
+MPIR_Init_thread(138).........: 
+MPID_Init(1117)...............: 
+MPIDI_SHMI_mpi_init_hook(29)..: 
+MPIDI_POSIX_mpi_init_hook(141): 
+MPIDI_POSIX_eager_init(2268)..: 
+MPIDU_shm_seg_commit(296).....: unable to allocate shared memory
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+Job 1856681 running on hopper[011-012]
+slurmstepd: error: *** STEP 1856681.0 ON hopper011 CANCELLED AT 2023-04-12T20:29:31 ***
+srun: error: hopper012: task 7: Killed
+srun: error: hopper011: tasks 0-6: Killed

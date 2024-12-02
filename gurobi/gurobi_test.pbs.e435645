@@ -1,0 +1,6 @@
+Installing package into '/users/mfricke/R/x86_64-pc-linux-gnu-library/3.5'
+(as 'lib' is unspecified)
+inferring 'repos = NULL' from 'pkgs'
+* installing *binary* package 'gurobi' ...
+* DONE (gurobi)
+Loading required package: slam

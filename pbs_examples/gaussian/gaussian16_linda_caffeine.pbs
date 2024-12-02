@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=00:05:00
+#PBS -N g16_caffeine
+#PBS -j oe
+#PBS -m bae
+#PBS -M mfricke@unm.edu
+
+module load gaussian/g16
+
+# To make linda print verbose messages
+export GAUSS_LFLAGS="-v"
+
+INPUT_MOLECULE=$PBS_O_WORKDIR/caffeine.gau
+OUTPUT_FILE=$PBS_O_WORKDIR/HCl.log
+
+# Reformat the PBS provided list of compute nodes to a format Gaussian can understand
+#i.e. remove duplicates and replace newlines with commas
+export GAUSS_WDEF=$(cat $PBS_NODEFILE | uniq | sed -z 's/\n/,/g;s/,$/\n/')
+
+# Tell Linda to use as many cores as requested by the user
+#export GAUSS_PDEF=$PBS_TASKNUM
+export GAUSS_PDEF=$PBS_NUM_NODES
+echo "Parallelizing $GAUSS_PDEF processes across $GAUSS_WDEF nodes."
+
+# Run Gaussian
+g16 $INPUT_MOLECULE $OUTPUT_FILE

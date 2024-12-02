@@ -1,0 +1,17 @@
+#!/bin/bash
+# Sample Vasp Job Submission Script
+# Matthew Fricke, Feb 1st, 2022
+#SBATCH --job-name=vasp_sample
+#SBATCH --output=vasp_sample_wheeler.out
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=8
+#SBATCH --mail-user=mfricke@unm.edu
+#SBATCH --mail-type=ALL
+#SBATCH --partition=normal
+#SBATCH --time=1:00:00
+
+module load intel/20.0.4
+module load vasp/6.2.1/intel/20.0.4/no_vtst
+
+srun --mpi=pmi2 vasp_std
+

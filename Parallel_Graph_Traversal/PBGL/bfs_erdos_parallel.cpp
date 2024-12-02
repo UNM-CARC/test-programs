@@ -1,0 +1,140 @@
+// To suppress placeholders deprecated messages
+#define BOOST_BIND_GLOBAL_PLACEHOLDERS
+
+// Enable PBGL interfaces to BGL algorithms - needs to be before distributed boost headersx
+#include <boost/graph/use_mpi.hpp>
+
+#include <queue>
+#include <string>
+#include <iostream>
+#include <boost/graph/visitors.hpp>
+#include <boost/graph/erdos_renyi_generator.hpp>
+#include <boost/random/linear_congruential.hpp>
+#include <boost/graph/breadth_first_search.hpp>
+#include <boost/graph/distributed/graphviz.hpp>
+#include <boost/static_assert.hpp>
+#include <ctime>            // std::time
+
+#include <boost/bind/bind.hpp> 
+
+// Communication via MPI
+#include <boost/graph/distributed/mpi_process_group.hpp>
+
+// Distributed adjacency list
+#include <boost/graph/distributed/adjacency_list.hpp>
+
+// For choose_min_reducer
+#include <boost/graph/distributed/distributed_graph_utility.hpp>
+
+// Standard Library includes
+#include <fstream>
+#include <string>
+
+#ifdef BOOST_NO_EXCEPTIONS
+void
+boost::throw_exception(std::exception const& ex)
+{
+  std::cout << ex.what() << std::endl;
+  abort();
+}
+#endif
+
+typedef boost::property<boost::edge_weight_t, unsigned int> EdgeWeightProperty;
+
+// Define the MPI aware distributed adjacency list
+typedef boost::adjacency_list<boost::vecS, boost::distributedS<boost::graph::distributed::mpi_process_group, boost::vecS>, boost::undirectedS, boost::property<boost::vertex_distance_t, std::size_t> > Graph; 
+
+typedef boost::erdos_renyi_iterator<boost::minstd_rand, Graph> ERGen;
+
+int main( int argc, char* argv[] )
+{
+  boost::mpi::environment env(argc,argv);
+  
+  // Get the number of processes
+  int world_size;
+  MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+
+  // Get the rank of the process
+  int world_rank;
+  MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+
+  // Get the name of the processor
+  char processor_name[MPI_MAX_PROCESSOR_NAME];
+  int name_len;
+  MPI_Get_processor_name(processor_name, &name_len);
+
+  // Print off a hello world message
+  std::cout << "Hello from processor " << processor_name << ", rank " << world_rank << " out of " << world_size <<  " processors" << std::endl;
+
+  // Parse command-line options
+  const char* filename = "weighted_graph.gr";
+  if (argc > 1) filename = argv[1];
+
+  // Set the random seed for Erdos graph generation
+  boost::minstd_rand gen;
+  gen.seed(static_cast<unsigned int>(std::time(0)));
+
+  // Define how large the graph will be
+  unsigned int n_verticies = 100;
+
+  // Define the probability of connecting verticies with an edge
+  float p_connection = 0.25;
+
+  // Create graph with 100 nodes and edges with probability 0.25
+  Graph g(ERGen(gen, n_verticies, p_connection), ERGen(), n_verticies);
+
+  // Give the nodes some names
+  const char* name[n_verticies]; 
+  for(int i = 0; i < n_verticies; i++)
+  {
+     name[i] = boost::to_string(i).c_str();
+  }
+
+  // Get vertex 0 in the graph
+  boost::graph_traits<Graph>::vertex_descriptor start = vertex(0, g);
+  
+  // Compute BFS levels from vertex 0
+  boost::property_map<Graph, boost::vertex_distance_t>::type distance = get(boost::vertex_distance, g);
+  
+  // Initialize distances to infinity and set reduction operation to 'min'
+  BGL_FORALL_VERTICES(v, g, Graph) 
+  {
+    put(distance, v, (std::numeric_limits<std::size_t>::max)());
+  }
+
+  // Choose to take the minimum distance when there are collistions at the same node
+  distance.set_reduce(boost::graph::distributed::choose_min_reducer<std::size_t>());
+
+  // Set the distance to the start node to zero
+  put(distance, start, 0);
+
+  // Perform the parallel search
+  breadth_first_search(g, start, visitor(boost::make_bfs_visitor(record_distances(distance, boost::on_tree_edge()))));
+  
+  // Output a Graphviz DOT file
+  std::string outfile;
+  
+  if (argc > 2)
+    outfile = argv[2];
+  else {
+    outfile = filename;
+    size_t i = outfile.rfind('.');
+    if (i != std::string::npos)
+      outfile.erase(outfile.begin() + i, outfile.end());
+    outfile += "-bfs.dot";
+  }
+  
+  if (process_id(process_group(g)) == 0) {
+    std::cout << "Writing GraphViz output to " << outfile << "... ";
+    std::cout.flush();
+  }
+  write_graphviz(outfile, g, make_label_writer(distance));
+  if (process_id(process_group(g)) == 0)
+    std::cout << "Done." << std::endl;
+  
+  // Finalize the MPI environment.
+  MPI_Finalize();
+
+
+  return 0;
+ }

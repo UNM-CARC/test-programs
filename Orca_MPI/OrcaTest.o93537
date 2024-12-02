@@ -1,0 +1,14 @@
+Gibbs Portable Batch System Prologue
+Job Id: 93537.gibbs.gibbs.alliance.unm.edu
+Username: mfricke
+Job 93537.gibbs.gibbs.alliance.unm.edu running on nodes:
+gibbs21 
+
+prologue running on host: gibbs21
+gibbs21: kill-users: no process found
+Starting SSH Key Agent...
+Agent pid 15781
+Starting job: Fri Dec 17 15:47:20 MST 2021
+Job number: 93537
+Finish: Fri Dec 17 16:47:27 MST 2021
+Gibbs Portable Batch System Epilogue

@@ -1,0 +1,27 @@
+Gibbs Portable Batch System Prologue
+Job Id: 94521.gibbs.gibbs.alliance.unm.edu
+Username: mfricke
+Job 94521.gibbs.gibbs.alliance.unm.edu running on nodes:
+gibbs21 
+
+prologue running on host: gibbs21
+gibbs21: kill-users: no process found
+Starting SSH Key Agent...
+Agent pid 8589
+You are using /bin/bash shell. Executing the appropriate amber shell script...
+Warning: since we are calling an external script the variables set will not be automatically cleared by a module unload or purge.
+Shell script execution complete.
+[cli_0]: aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 0
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   PID 8599 RUNNING AT gibbs21
+=   EXIT CODE: 1
+=   CLEANING UP REMAINING PROCESSES
+=   YOU CAN IGNORE THE BELOW CLEANUP MESSAGES
+===================================================================================
+cp: cannot stat '/wt1mg.pdb.out': No such file or directory
+cp: cannot stat '/wt1mg.pdb.rst': No such file or directory
+cp: cannot stat '/wt1mg.pdb.mdcrd': No such file or directory
+Gibbs Portable Batch System Epilogue

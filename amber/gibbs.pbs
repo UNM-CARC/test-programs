@@ -1,0 +1,19 @@
+#PBS -q defaultq
+#PBS -l nodes=1:ppn=16
+#PBS -l walltime=1:00:00
+#PBS -N amber20_test
+#PBS -j oe
+#PBS -m bae
+#PBS -M mfricke@unm.edu
+
+DATA_PATH=$PBS_O_WORKDIR/data
+
+module load amber/20/mpi
+
+mpirun -np 16 --machinefile $PBS_NODEFILE pmemd.MPI -O -i $DATA_PATH/TXM-wbions-prod6-r1.in \
+-o $DATA_PATH/TXM-wbions-prod6-r1.out \
+-p $DATA_PATH/TXM-wbions.prmtop \
+-c $DATA_PATH/TXM-wbions-prod5-r1.rst \
+-r $DATA_PATH/TXM-wbions-prod6-r1.rst \
+-x $DATA_PATH/TXM-wbions-prod6-r1.mdcrd
+

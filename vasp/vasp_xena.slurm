@@ -1,0 +1,16 @@
+#!/bin/bash
+# Sample Vasp Job Submission Script
+# Matthew Fricke, October 26th, 2020
+#SBATCH --job-name=vasp_sample_xena
+#SBATCH --output=vasp_sample_xena.out
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=16
+#SBATCH --mail-user=youremail@unm.edu
+#SBATCH --mail-type=ALL
+#SBATCH --partition=singleGPU
+#SBATCH --time=1:00:00
+
+module swap gcc intel/19.1.1.217
+module load vasp/intel/19.1.1/6.1.0
+mpirun -bootstrap slurm vasp_std
+

@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char* argv[])
+{
+  const char* instruction = "avx";
+  cout << "This processor does ";
+  if(!__builtin_cpu_supports( instruction ) )
+    cout << "not ";
+  cout << "support " << instruction << endl;
+  return 0;
+}

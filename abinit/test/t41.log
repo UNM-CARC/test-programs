@@ -1,0 +1,3 @@
+You have not been allocated GPUs. To request GPUs, use the -G option in your submission script.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 41150.0 ON hopper008 CANCELLED AT 2022-09-26T17:10:13 DUE TO TIME LIMIT ***

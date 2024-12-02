@@ -1,0 +1,158 @@
+//
+//      Sieve of Eratosthenese
+//
+
+#include <mpi.h>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int blockLow( int id, int p, int n );
+int blockHigh( int id, int p, int n );
+int blockSize( int id, int p, int n );
+int min( double x, double y );
+
+int main( int argc, char *argv[] )
+{
+  int count           = -1;            // Local prime count
+  double elapsed_time = -1;            // Parallel execution time
+  int first           = -1;            // Index of first multiple
+  int global_count    = -1;            // Global prime count
+  int high_value      = -1;            // Highest value on this process 
+  int id              = -1;            // Process ID number
+  int index           = -1;            // Index of current prime
+  int low_value       = -1;            // Lowest value on this process
+  char *marked;                        // Portion of 2 ... 'n'
+  int n               = -1;            // Sieving from 2 ... 'n'
+  int p               = -1;            // Number of processes
+  int proc0_size      = -1;            // Size of proc 0's subarray
+  int prime           = -1;            // Current prime
+  int size            = -1;            // Elements in 'marked'
+  
+  MPI_Init( &argc, &argv );
+  
+  // Start the timer
+  MPI_Barrier( MPI_COMM_WORLD );
+  elapsed_time = -MPI_Wtime();
+  MPI_Comm_rank( MPI_COMM_WORLD, &id );
+  MPI_Comm_size( MPI_COMM_WORLD, &p );
+  
+  if( argc != 2 )
+    {
+      if (!id) printf("Command line: %s <m>\n", argv[0] );
+      MPI_Finalize();
+      exit(1);
+    }
+  
+  n = atoi( argv[1] );
+  
+  // Calculate this processes' share of the array and the integers represented by the first and last array elements
+  low_value = 2 + blockLow( id, p, n-1 );
+  high_value = 2 + blockHigh( id, p, n-1 );
+  size = blockSize( id, p, n-1 );
+    
+  // Exit if not all the primes used for sieving are not on process 0
+  proc0_size = (n-1)/p;
+
+  if ( 2 + proc0_size < sqrt(n) )
+    {
+      if (!id) printf("To many processes\n");
+      MPI_Finalize();
+      exit(1);
+    }
+
+  // Allocate this process's share of the array
+  marked = (char*) malloc(size);
+  
+  if (marked == NULL)
+    {
+      printf("Cannot allocate enough memory\n");
+      MPI_Finalize();
+      exit(1);
+    }
+
+  for ( int i = 0; i < size; i++)
+    {
+      marked[i] = 0;
+    }
+
+  if (!id) index = 0;
+  prime = 2;
+  
+  do
+    {
+      if( prime*prime > low_value )
+	{
+	  first = prime*prime - low_value;
+	}      
+      else if (!(low_value % prime))
+	{
+	  first = 0;
+	}
+      else
+	{
+	  first = prime - (low_value % prime); 
+	}
+
+      for( int i = first; i < size; i+= prime )
+	{
+	  marked[i] = 1;
+	}
+
+      if( !id )
+	{
+	  while( marked[++index] );
+	  prime = index + 2;
+	}
+
+      MPI_Bcast( &prime, 1, MPI_INT, 0, MPI_COMM_WORLD );
+    }
+  while( prime*prime <= n );
+
+  count = 0;
+  
+  for ( int i = 0; i < size; i++ )
+    {
+      if( !marked[i])
+	{
+	  count++;
+	}
+
+      MPI_Reduce( &count, &global_count, 1, MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD );
+    }
+
+  // Stop the timer
+
+  elapsed_time += MPI_Wtime();
+
+  // Print the results
+  
+  if (!id)
+    {
+      printf("%d primes primes less than or equal to %d\n", global_count, n);
+      printf("Total elapsed time: %10.6f\n", elapsed_time);
+    }
+  MPI_Finalize();
+
+  return 0;
+}
+
+int blockLow( int id, int p, int n )
+{
+  return (id*n)/p;
+}
+
+int blockHigh( int id, int p, int n )
+{
+  return blockLow(id+1, p, n) - 1;
+}
+
+int blockSize( int id, int p, int n )
+{
+  return blockLow( id+1, p, n ) - blockLow(id, p, n);
+}
+
+int min(double x, double y)
+{
+  return x > y? x : y; 
+}

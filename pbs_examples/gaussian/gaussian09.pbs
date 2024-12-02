@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#PBS -q default
+#PBS -l nodes=2:ppn=8
+#PBS -l walltime=00:05:00
+#PBS -N gaussian09_test
+#PBS -j oe
+#PBS -m bae
+#PBS -M my_email@unm.edu
+
+INPUT_MOLECULE=$PBS_O_WORKDIR/HCl.gjf
+OUTPUT_FILE=$PBS_O_WORKDIR/HCl.log
+
+module load gaussian/g09
+g09 $INPUT_MOLECULE $OUTPUT_FILE

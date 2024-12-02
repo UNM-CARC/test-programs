@@ -1,0 +1,103 @@
+//http://www.cs.ucr.edu/~nael/217-f15/lectures/217-lec21.pdf
+
+void data_server(unsigned int vector_size) 
+{
+  int np, num_nodes = np – 1, first_node = 0, last_node = np - 2;
+  unsigned int num_bytes = vector_size * sizeof(float);
+  float *input_a = 0,
+    *input_b = 0, *output = 0;
+  
+  /* Set MPI Communication Size */
+  MPI_Comm_size(MPI_COMM_WORLD, &np);
+  
+  /* Allocate input data */
+  input_a = (float *)malloc(num_bytes);
+  input_b = (float *)malloc(num_bytes);
+  output = (float *)malloc(num_bytes);
+  
+  if(input_a == NULL || input_b == NULL || output == NULL) {
+    printf("Server couldn't allocate memory\n");
+    MPI_Abort( MPI_COMM_WORLD, 1 );
+  }
+  
+  /* Initialize input data */
+  random_data(input_a, vector_size , 1, 10);
+  random_data(input_b, vector_size , 1, 10);
+
+  /* Wait for previous communications */
+  MPI_Barrier(MPI_COMM_WORLD);
+  /* Collect output data */
+  MPI_Status status;
+  for(int process = 0; process < num_nodes; process++) {
+    MPI_Recv(output + process * num_points / num_nodes,
+	     num_points / num_comp_nodes, MPI_REAL, process,
+	     DATA_COLLECT, MPI_COMM_WORLD, &status );
+  }
+  /* Store output data */
+  store_output(output, dimx, dimy, dimz);
+  /* Release resources */
+  free(input);
+  free(output);
+}
+
+void compute_node(unsigned int vector_size ) 
+{
+  int np;
+  unsigned int num_bytes = vector_size * sizeof(float);
+  float *input_a, *input_b, *output;
+  MPI_Status status;
+  MPI_Comm_size(MPI_COMM_WORLD, &np);
+  int server_process = np - 1;
+  /* Allocate memory */
+  gmacMalloc((void **)&input_a, num_bytes);
+  gmacMalloc((void **)&input_b, num_bytes);
+  gmacMalloc((void **)&output, num_bytes);
+
+  /* Get the input data from server process */
+  MPI_Recv(input_a, vector_size, MPI_FLOAT, server_process,
+	   DATA_DISTRIBUTE, MPI_COMM_WORLD, &status);
+
+  MPI_Recv(input_b, vector_size, MPI_FLOAT, server_process,
+	   DATA_DISTRIBUTE, MPI_COMM_WORLD, &status);
+
+  /* Compute the partial vector addition */
+  dim3 Db(BLOCK_SIZE);
+  dim3 Dg((vector_size + BLOCK_SIZE – 1) / BLOCK_SIZE);
+  vector_add_kernel<<<Dg, Db>>>(gmacPtr(output), gmacPtr(input_a),
+				gmacPtr(input_b), vector_size);
+  gmacThreadSynchronize();
+
+  /* Send the output */
+  MPI_Send(output, vector_size, MPI_FLOAT,
+	   server_process, DATA_COLLECT, MPI_COMM_WORLD);
+  /* Release device memory */
+  gmacFree(d_input_a);
+  gmacFree(d_input_b);
+  gmacFree(d_output);
+}
+
+int main(int argc, char *argv[]) 
+{
+  int vector_size = 1024 * 1024 * 1024;
+  int pid=-1, np=-1;
+  MPI_Init(&argc, &argv);
+  MPI_Comm_rank(MPI_COMM_WORLD, &pid);
+  MPI_Comm_size(MPI_COMM_WORLD, &np);
+
+  if(np < 3) 
+  {
+    if(0 == pid) 
+      printf("Need 3 or more processes.\n");
+
+    MPI_Abort( MPI_COMM_WORLD, 1 ); 
+    return 1;
+  }
+
+  if(pid < np - 1)
+    compute_node(vector_size / (np - 1));
+  else
+    data_server(vector_size);
+
+  MPI_Finalize();
+  return 0;
+}

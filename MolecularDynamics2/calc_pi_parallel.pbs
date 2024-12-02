@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#PBS -l nodes=2:ppn=8
+#PBS -l walltime=00:05:00
+#PBS -N calc_pi_parallel
+#PBS -j oe
+#PBS -M youremailaddress@unm.edu
+
+module load parallel-20170322-gcc-4.8.5-2ycpx7e
+module load anaconda
+source activate numpy
+
+source $(which env_parallel.bash)
+
+cd $PBS_O_WORKDIR
+env_parallel --sshloginfile $PBS_NODEFILE --joblog $PBS_JOBNAME.joblog "python $PBS_O_WORKDIR/code/calcPiSerial.py {}" :::: data/step_sizes.txt

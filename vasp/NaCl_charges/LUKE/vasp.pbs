@@ -1,0 +1,44 @@
+#!/bin/bash
+### PBS Directives (aka arguments to qsub) to select job resources
+# Run "man qsub" for more information
+#PBS -lnodes=2:ppn=8
+#PBS -lwalltime=48:00:00
+#PBS -S /bin/bash
+#PBS -j oe 
+#PBS -N NaCl_test
+#PBS -m ae
+#PBS -M igonzales@unm.edu 
+
+# Note: POTCARS are located in /opt/local/vasp/5.4.1/potcars
+# Load the environment module for VASP version 5.4.1 on wheeler
+#module load vasp/5.4.1/intel/17.0.4/no_vtst
+#module load vasp/5.4.1/intel/17.0.4/vtst
+# Load the environment module for VASP version 5.4.4 on wheeler
+#module load vasp/5.4.4/intel/19.1.1/no_vtst
+# Load the environment module for VASP version 6.1 on wheeler
+module load vasp/6.1.0/intel/19.1.1/no_vtst
+
+### Name of STDOUT from calculation and output from /usr/bin/time
+OUTPUT=out.log
+TIMEOUT=timing.log
+
+### Choose the vasp executable of vasp_std, vasp_gam, vasp_ncl
+VASPEXE=vasp_std 
+
+# To run: After setting the above variables and directives as you
+# like, this file should be placed in a directory along with the 
+# POSCAR, INCAR, POTCAR, and any other files required by vasp,
+# preferably in a scratch directory or other device with fast I/O.
+# Submit to the queue with this command: qsub vasp.pbs
+# Monitor the job with qstat -a
+
+# Useful variables and determine how to format timing data found
+# in TIMEOUT as set above
+PBS_JOBNUM=$(echo PBS_JOBID | cut -d"." -f1)
+export TIME="Timing results from $(hostname -s), job #: $PBS_JOBNUM, started on $(date) \nTotal time (sec): %e \nMemory (Kb): %M \nSwaps (#): %W \nWaits (#): %w \nInputs (#): %I \nOutputs (#): %O"
+
+# Change to the directory that this job was submitted from
+cd $PBS_O_WORKDIR
+
+# Call vasp using Intel MPI wrapper with nodes x ppn processes
+/usr/bin/time -o $TIMEOUT mpirun -np $PBS_NP -machinefile $PBS_NODEFILE $VASPEXE > $OUTPUT

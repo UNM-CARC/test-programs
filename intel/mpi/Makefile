@@ -1,0 +1,12 @@
+MPI_COMPILE_FLAGS = $(mpiicc --showme:compile)
+MPI_LINK_FLAGS = $(mpiicc --showme:link)
+
+CC=mpiicc
+
+$(info Using $(CC) compiler) 
+
+test: test.c
+	$(CC) $(MPI_COMPILE_FLAGS) test.c $(MPI_LINK_FLAGS) -o test
+
+clean:
+	rm test

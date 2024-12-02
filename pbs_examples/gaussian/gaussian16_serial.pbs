@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=00:05:00
+#PBS -N g16_serial_test
+#PBS -j oe
+#PBS -m bae
+#PBS -M my_email@unm.edu
+
+module load gaussian/g16
+
+INPUT_MOLECULE=$PBS_O_WORKDIR/HCl.gjf
+OUTPUT_FILE=$PBS_O_WORKDIR/HCl.log
+
+# Run Gaussian
+g16 $INPUT_MOLECULE $OUTPUT_FILE

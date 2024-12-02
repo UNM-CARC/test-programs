@@ -1,0 +1,181 @@
+Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" failed.
+Compiler: /opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/nvcc 
+Build flags: 
+Id flags: --keep;--keep-dir;tmp -v
+
+The output was:
+1
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin
+#$ _THERE_=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..
+#$ NVVMIR_LIBRARY_DIR=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/../nvvm/libdevice
+#$ LD_LIBRARY_PATH=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/../lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/lib64:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-9.3.0-oxjixak2sy5mudydbjatzvj4bpveh5jl/lib64:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-9.3.0-oxjixak2sy5mudydbjatzvj4bpveh5jl/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/mpc-1.1.0-kv3zuyscaxtpqfnrbkcboelyklhmn442/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/mpfr-3.1.6-nol4vkt6ncc5qrnzp6hq6lkqleatjubm/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/isl-0.20-hyy2twd64ysizcg4bzlvlvohu6mpshsr/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/libxml2-2.9.10-bt74u75nx4qng6lb6iiveanv5jwjpkz4/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/xz-5.2.5-jb22kvgcnwns3ey3aeyhiqxnof7dgvsx/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/zlib-1.2.11-pkmj6e72vggig3epxjcwxgzmxncaqnmp/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/libiconv-1.16-qazxaa4lnd2ukd44fjzdhayyxvcg3wyu/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/ncurses-6.2-tbpd5z45tamug3s3u3utt3rhay77lduh/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/openssl-1.1.1h-zoceuicyueo4bpveenmajcxkpmtxlsix/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/zstd-1.4.5-3boiausohz77fqap2ptmbwpoyy5a4ufg/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gmp-6.1.2-zn55wh7voutcbk46jzwgfyjfincjyuhh/lib
+#$ PATH=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/../nvvm/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-9.3.0-oxjixak2sy5mudydbjatzvj4bpveh5jl/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/libxml2-2.9.10-bt74u75nx4qng6lb6iiveanv5jwjpkz4/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/xz-5.2.5-jb22kvgcnwns3ey3aeyhiqxnof7dgvsx/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/libiconv-1.16-qazxaa4lnd2ukd44fjzdhayyxvcg3wyu/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/cmake-3.19.0-xze7os4feu2a3535kubvuy3fphpilaig/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/ncurses-6.2-tbpd5z45tamug3s3u3utt3rhay77lduh/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/openssl-1.1.1h-zoceuicyueo4bpveenmajcxkpmtxlsix/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/zstd-1.4.5-3boiausohz77fqap2ptmbwpoyy5a4ufg/bin:/opt/spack/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+#$ INCLUDES="-I/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..//include"  
+#$ LIBRARIES=  "-L/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..//lib64/stubs" "-L/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..//lib64"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ rm tmp/a_dlink.reg.c
+#$ gcc -std=c++14 -D__CUDA_ARCH__=300 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..//include"   -D"__CUDACC_VER_BUILD__=85" -D"__CUDACC_VER_MINOR__=1" -D"__CUDACC_VER_MAJOR__=9" -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "tmp/CMakeCUDACompilerId.cpp1.ii" 
+In file included from /opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/host_config.h:50,
+                 from /opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/cuda_runtime.h:78,
+                 from <command-line>:
+/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/crt/host_config.h:121:2: error: #error -- unsupported GNU version! gcc versions later than 6 are not supported!
+  121 | #error -- unsupported GNU version! gcc versions later than 6 are not supported!
+      |  ^~~~~
+# --error 0x1 --
+
+
+Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" failed.
+Compiler: /opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/nvcc 
+Build flags: 
+Id flags:  -v
+
+The output was:
+1
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin
+#$ _THERE_=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..
+#$ NVVMIR_LIBRARY_DIR=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/../nvvm/libdevice
+#$ LD_LIBRARY_PATH=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/../lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/lib64:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-9.3.0-oxjixak2sy5mudydbjatzvj4bpveh5jl/lib64:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-9.3.0-oxjixak2sy5mudydbjatzvj4bpveh5jl/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/mpc-1.1.0-kv3zuyscaxtpqfnrbkcboelyklhmn442/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/mpfr-3.1.6-nol4vkt6ncc5qrnzp6hq6lkqleatjubm/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/isl-0.20-hyy2twd64ysizcg4bzlvlvohu6mpshsr/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/libxml2-2.9.10-bt74u75nx4qng6lb6iiveanv5jwjpkz4/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/xz-5.2.5-jb22kvgcnwns3ey3aeyhiqxnof7dgvsx/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/zlib-1.2.11-pkmj6e72vggig3epxjcwxgzmxncaqnmp/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/libiconv-1.16-qazxaa4lnd2ukd44fjzdhayyxvcg3wyu/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/ncurses-6.2-tbpd5z45tamug3s3u3utt3rhay77lduh/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/openssl-1.1.1h-zoceuicyueo4bpveenmajcxkpmtxlsix/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/zstd-1.4.5-3boiausohz77fqap2ptmbwpoyy5a4ufg/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gmp-6.1.2-zn55wh7voutcbk46jzwgfyjfincjyuhh/lib
+#$ PATH=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/../nvvm/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-9.3.0-oxjixak2sy5mudydbjatzvj4bpveh5jl/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/libxml2-2.9.10-bt74u75nx4qng6lb6iiveanv5jwjpkz4/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/xz-5.2.5-jb22kvgcnwns3ey3aeyhiqxnof7dgvsx/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/libiconv-1.16-qazxaa4lnd2ukd44fjzdhayyxvcg3wyu/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/cmake-3.19.0-xze7os4feu2a3535kubvuy3fphpilaig/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/ncurses-6.2-tbpd5z45tamug3s3u3utt3rhay77lduh/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/openssl-1.1.1h-zoceuicyueo4bpveenmajcxkpmtxlsix/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/zstd-1.4.5-3boiausohz77fqap2ptmbwpoyy5a4ufg/bin:/opt/spack/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+#$ INCLUDES="-I/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..//include"  
+#$ LIBRARIES=  "-L/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..//lib64/stubs" "-L/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..//lib64"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ gcc -std=c++14 -D__CUDA_ARCH__=300 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..//include"   -D"__CUDACC_VER_BUILD__=85" -D"__CUDACC_VER_MINOR__=1" -D"__CUDACC_VER_MAJOR__=9" -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "/tmp/tmpxft_000046f0_00000000-8_CMakeCUDACompilerId.cpp1.ii" 
+In file included from /opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/host_config.h:50,
+                 from /opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/cuda_runtime.h:78,
+                 from <command-line>:
+/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/crt/host_config.h:121:2: error: #error -- unsupported GNU version! gcc versions later than 6 are not supported!
+  121 | #error -- unsupported GNU version! gcc versions later than 6 are not supported!
+      |  ^~~~~
+# --error 0x1 --
+
+
+Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" failed.
+Compiler: /opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/nvcc 
+Build flags: 
+Id flags: --keep;--keep-dir;tmp -v
+
+The output was:
+1
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin
+#$ _THERE_=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..
+#$ NVVMIR_LIBRARY_DIR=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/../nvvm/libdevice
+#$ LD_LIBRARY_PATH=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/../lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/lib64:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-9.3.0-oxjixak2sy5mudydbjatzvj4bpveh5jl/lib64:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-9.3.0-oxjixak2sy5mudydbjatzvj4bpveh5jl/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/mpc-1.1.0-kv3zuyscaxtpqfnrbkcboelyklhmn442/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/mpfr-3.1.6-nol4vkt6ncc5qrnzp6hq6lkqleatjubm/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/isl-0.20-hyy2twd64ysizcg4bzlvlvohu6mpshsr/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/libxml2-2.9.10-bt74u75nx4qng6lb6iiveanv5jwjpkz4/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/xz-5.2.5-jb22kvgcnwns3ey3aeyhiqxnof7dgvsx/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/zlib-1.2.11-pkmj6e72vggig3epxjcwxgzmxncaqnmp/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/libiconv-1.16-qazxaa4lnd2ukd44fjzdhayyxvcg3wyu/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/ncurses-6.2-tbpd5z45tamug3s3u3utt3rhay77lduh/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/openssl-1.1.1h-zoceuicyueo4bpveenmajcxkpmtxlsix/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/zstd-1.4.5-3boiausohz77fqap2ptmbwpoyy5a4ufg/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gmp-6.1.2-zn55wh7voutcbk46jzwgfyjfincjyuhh/lib
+#$ PATH=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/../nvvm/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-9.3.0-oxjixak2sy5mudydbjatzvj4bpveh5jl/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/libxml2-2.9.10-bt74u75nx4qng6lb6iiveanv5jwjpkz4/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/xz-5.2.5-jb22kvgcnwns3ey3aeyhiqxnof7dgvsx/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/libiconv-1.16-qazxaa4lnd2ukd44fjzdhayyxvcg3wyu/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/cmake-3.19.0-xze7os4feu2a3535kubvuy3fphpilaig/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/ncurses-6.2-tbpd5z45tamug3s3u3utt3rhay77lduh/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/openssl-1.1.1h-zoceuicyueo4bpveenmajcxkpmtxlsix/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/zstd-1.4.5-3boiausohz77fqap2ptmbwpoyy5a4ufg/bin:/opt/spack/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+#$ INCLUDES="-I/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..//include"  
+#$ LIBRARIES=  "-L/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..//lib64/stubs" "-L/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..//lib64"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ rm tmp/a_dlink.reg.c
+#$ gcc -std=c++14 -D__CUDA_ARCH__=300 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..//include"   -D"__CUDACC_VER_BUILD__=85" -D"__CUDACC_VER_MINOR__=1" -D"__CUDACC_VER_MAJOR__=9" -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "tmp/CMakeCUDACompilerId.cpp1.ii" 
+In file included from /opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/host_config.h:50,
+                 from /opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/cuda_runtime.h:78,
+                 from <command-line>:
+/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/crt/host_config.h:121:2: error: #error -- unsupported GNU version! gcc versions later than 6 are not supported!
+  121 | #error -- unsupported GNU version! gcc versions later than 6 are not supported!
+      |  ^~~~~
+# --error 0x1 --
+
+
+Compiling the CUDA compiler identification source file "CMakeCUDACompilerId.cu" failed.
+Compiler: /opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/nvcc 
+Build flags: 
+Id flags:  -v
+
+The output was:
+1
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ _HERE_=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin
+#$ _THERE_=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ TOP=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..
+#$ NVVMIR_LIBRARY_DIR=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/../nvvm/libdevice
+#$ LD_LIBRARY_PATH=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/../lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/lib64:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-9.3.0-oxjixak2sy5mudydbjatzvj4bpveh5jl/lib64:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-9.3.0-oxjixak2sy5mudydbjatzvj4bpveh5jl/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/mpc-1.1.0-kv3zuyscaxtpqfnrbkcboelyklhmn442/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/mpfr-3.1.6-nol4vkt6ncc5qrnzp6hq6lkqleatjubm/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/isl-0.20-hyy2twd64ysizcg4bzlvlvohu6mpshsr/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/libxml2-2.9.10-bt74u75nx4qng6lb6iiveanv5jwjpkz4/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/xz-5.2.5-jb22kvgcnwns3ey3aeyhiqxnof7dgvsx/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/zlib-1.2.11-pkmj6e72vggig3epxjcwxgzmxncaqnmp/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/libiconv-1.16-qazxaa4lnd2ukd44fjzdhayyxvcg3wyu/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/ncurses-6.2-tbpd5z45tamug3s3u3utt3rhay77lduh/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/openssl-1.1.1h-zoceuicyueo4bpveenmajcxkpmtxlsix/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/zstd-1.4.5-3boiausohz77fqap2ptmbwpoyy5a4ufg/lib:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gmp-6.1.2-zn55wh7voutcbk46jzwgfyjfincjyuhh/lib
+#$ PATH=/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/../nvvm/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-9.3.0-oxjixak2sy5mudydbjatzvj4bpveh5jl/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/libxml2-2.9.10-bt74u75nx4qng6lb6iiveanv5jwjpkz4/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/xz-5.2.5-jb22kvgcnwns3ey3aeyhiqxnof7dgvsx/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/libiconv-1.16-qazxaa4lnd2ukd44fjzdhayyxvcg3wyu/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/cmake-3.19.0-xze7os4feu2a3535kubvuy3fphpilaig/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/ncurses-6.2-tbpd5z45tamug3s3u3utt3rhay77lduh/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/openssl-1.1.1h-zoceuicyueo4bpveenmajcxkpmtxlsix/bin:/opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/zstd-1.4.5-3boiausohz77fqap2ptmbwpoyy5a4ufg/bin:/opt/spack/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+#$ INCLUDES="-I/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..//include"  
+#$ LIBRARIES=  "-L/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..//lib64/stubs" "-L/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..//lib64"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+#$ gcc -std=c++14 -D__CUDA_ARCH__=300 -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__  "-I/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/..//include"   -D"__CUDACC_VER_BUILD__=85" -D"__CUDACC_VER_MINOR__=1" -D"__CUDACC_VER_MAJOR__=9" -include "cuda_runtime.h" -m64 "CMakeCUDACompilerId.cu" > "/tmp/tmpxft_000046fc_00000000-8_CMakeCUDACompilerId.cpp1.ii" 
+In file included from /opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/host_config.h:50,
+                 from /opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/cuda_runtime.h:78,
+                 from <command-line>:
+/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/crt/host_config.h:121:2: error: #error -- unsupported GNU version! gcc versions later than 6 are not supported!
+  121 | #error -- unsupported GNU version! gcc versions later than 6 are not supported!
+      |  ^~~~~
+# --error 0x1 --
+
+
+Checking whether the CUDA compiler is NVIDIA using "" did not match "nvcc: NVIDIA \(R\) Cuda compiler driver":
+nvcc fatal   : No input files specified; use option --help for more information
+Checking whether the CUDA compiler is Clang using "" did not match "(clang version)":
+nvcc fatal   : No input files specified; use option --help for more information
+Checking whether the CUDA compiler is NVIDIA using "" did not match "nvcc: NVIDIA \(R\) Cuda compiler driver":
+nvcc fatal   : No input files specified; use option --help for more information
+Checking whether the CUDA compiler is Clang using "" did not match "(clang version)":
+nvcc fatal   : No input files specified; use option --help for more information
+Detecting CUDA compiler ABI info failed to compile with the following output:
+Change Dir: /users/mfricke/test_programs/mixbench/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_7dec9/fast && gmake: Warning: File `Makefile' has modification time 6.5 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_7dec9.dir/build.make CMakeFiles/cmTC_7dec9.dir/build
+gmake[1]: Entering directory `/users/mfricke/test_programs/mixbench/build/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File `CMakeFiles/cmTC_7dec9.dir/flags.make' has modification time 6.5 s in the future
+Building CUDA object CMakeFiles/cmTC_7dec9.dir/CMakeCUDACompilerABI.cu.o
+/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/nvcc      -c /opt/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/cmake-3.19.0-xze7os4feu2a3535kubvuy3fphpilaig/share/cmake-3.19/Modules/CMakeCUDACompilerABI.cu -o CMakeFiles/cmTC_7dec9.dir/CMakeCUDACompilerABI.cu.o
+In file included from /opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/host_config.h:50,
+                 from /opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/cuda_runtime.h:78,
+                 from <command-line>:
+/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/crt/host_config.h:121:2: error: #error -- unsupported GNU version! gcc versions later than 6 are not supported!
+  121 | #error -- unsupported GNU version! gcc versions later than 6 are not supported!
+      |  ^~~~~
+gmake[1]: *** [CMakeFiles/cmTC_7dec9.dir/CMakeCUDACompilerABI.cu.o] Error 1
+gmake[1]: Leaving directory `/users/mfricke/test_programs/mixbench/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_7dec9/fast] Error 2
+
+
+
+
+Determining if the CUDA compiler works failed with the following output:
+Change Dir: /users/mfricke/test_programs/mixbench/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_3e373/fast && gmake: Warning: File `Makefile' has modification time 6.6 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_3e373.dir/build.make CMakeFiles/cmTC_3e373.dir/build
+gmake[1]: Entering directory `/users/mfricke/test_programs/mixbench/build/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File `CMakeFiles/cmTC_3e373.dir/flags.make' has modification time 6.6 s in the future
+Building CUDA object CMakeFiles/cmTC_3e373.dir/main.cu.o
+/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/bin/nvcc      -c /users/mfricke/test_programs/mixbench/build/CMakeFiles/CMakeTmp/main.cu -o CMakeFiles/cmTC_3e373.dir/main.cu.o
+In file included from /opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/host_config.h:50,
+                 from /opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/cuda_runtime.h:78,
+                 from <command-line>:
+/opt/spack/opt/spack/linux-centos7-haswell/gcc-9.3.0/cuda-9.1.85-24b7xup6xa4cttapt7ajp4qcmf7qemo5/include/crt/host_config.h:121:2: error: #error -- unsupported GNU version! gcc versions later than 6 are not supported!
+  121 | #error -- unsupported GNU version! gcc versions later than 6 are not supported!
+      |  ^~~~~
+gmake[1]: *** [CMakeFiles/cmTC_3e373.dir/main.cu.o] Error 1
+gmake[1]: Leaving directory `/users/mfricke/test_programs/mixbench/build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_3e373/fast] Error 2
+
+
+

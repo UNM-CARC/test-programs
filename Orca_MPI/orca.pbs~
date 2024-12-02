@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+
+#PBS -n orca_test
+#PBS -o test.out
+#PBS -l walltime=00:10:00
+#PBS -l nodes=1:ppn=8
+#PBS -M mfricke@unm.edu
+#PBS -m bae
+
+files=test.inp
+
+cd $SLURM_SUBMIT_DIR/
+
+module load orca/4.0.0/openmpi/2.0.2
+
+# Orca needs the full path when running in parallel
+full_path=$(which orca)
+
+echo $full_path
+
+$full_path $files

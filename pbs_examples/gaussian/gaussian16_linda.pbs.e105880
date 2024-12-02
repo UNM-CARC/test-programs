@@ -1,0 +1,26 @@
+Gaussian scratch directory (GAUSS_SCRDIR) set to /carc/scratch/users/mfricke/
+FIO/stdio: No such file or directory
+FIO-F-/OPEN/unit=11/error code returned by host stdio - 2.
+ File name = /carc/scratch/users/mfricke/Gau-46866.inp
+ In source file ml0.f, at line number 197
+addr2line: 'g16': No such file
+  g16() [0x1677be7]
+addr2line: 'g16': No such file
+  g16() [0x163198f]
+addr2line: 'g16': No such file
+  g16() [0x160f1ff]
+addr2line: 'g16': No such file
+  g16() [0x162674e]
+addr2line: 'g16': No such file
+  g16() [0x162857d]
+addr2line: 'g16': No such file
+  g16() [0x1627115]
+addr2line: 'g16': No such file
+  g16() [0x410896]
+addr2line: 'g16': No such file
+  g16() [0x40f9a4]
+addr2line: 'g16': No such file
+  /usr/lib64/libc.so.6(__libc_start_main+0xf3) [0x1473e27c0cf3]
+addr2line: 'g16': No such file
+  g16() [0x40a0e9]
+/var/spool/slurm/slurmd/job105880/slurm_script: line 28: 46866 Aborted                 (core dumped) g16 $INPUT_MOLECULE $OUTPUT_FILE

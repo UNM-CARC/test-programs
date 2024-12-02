@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#PBS -l nodes=4:ppn=8
+#PBS -l walltime=24:00:00
+#PBS -N sieve
+#PBS -j oe
+ 
+module load intel/20.0.2
+mpirun $PBS_O_WORKDIR/sieve 10000000
+
+

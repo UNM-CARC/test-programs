@@ -1,0 +1,26 @@
+#!/bin/csh
+#PBS -l nodes=2:ppn=16
+#PBS -l walltime=00:15:00
+
+# uncomment next line (remove *one* of the leading "#") and change queue name if desired.
+##PBS -q default
+
+# Next, load the abinit 9.4.2 environment module
+
+module load intel/20.0.4 abinit/9.6.1-qrve
+
+# change directory to the directory from which PBS script was submitted.
+cd     $PBS_O_WORKDIR
+
+# make sure this variable = #nodes * # processors/node = total # MPI tasks
+set ntasks = 32
+echo "number of MPI tasks = $ntasks"
+
+set RUN_DIR       =  $PBS_O_WORKDIR
+
+set execstart = `date`
+mpirun -np $ntasks -machinefile $PBS_NODEFILE abinit < t41.files >& t41.log
+set execend   = `date`
+
+echo "    abinit start:  $execstart"
+echo "    abinit end:    $execend"

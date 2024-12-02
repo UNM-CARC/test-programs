@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#SBATCH --job-name=slurm_test
+#SBATCH --output=output.txt
+#SBATCH --ntasks=16
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=8
+#SBATCH --time=00:05:00
+#SBATCH --mail-type=All
+#SBATCH --mail-user=mfricke@hpc.unm.edu
+
+module load openmpi3
+prun sieve 10000000000

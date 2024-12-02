@@ -1,0 +1,63 @@
+#include <queue>
+#include <string>
+#include <iostream>
+#include <boost/graph/visitors.hpp>
+#include <boost/graph/adjacency_list.hpp>
+#include <boost/graph/erdos_renyi_generator.hpp>
+#include <boost/random/linear_congruential.hpp>
+#include <boost/graph/breadth_first_search.hpp>
+#include <boost/graph/graphviz.hpp>
+#include <ctime>            // std::time
+
+typedef boost::property<boost::edge_weight_t, unsigned int> EdgeWeightProperty;
+typedef boost::adjacency_list<boost::setS, boost::vecS, boost::undirectedS, 
+                              boost::no_property, EdgeWeightProperty> Graph;
+typedef boost::erdos_renyi_iterator<boost::minstd_rand, Graph> ERGen;
+
+// Subclass boost::default_bfs_visitor and override discover_vertex()
+class BFSVisitor : public boost::default_bfs_visitor 
+{
+public:    
+  BFSVisitor(std::queue<Graph::vertex_descriptor>& _visited) : visited(_visited){}
+  void discover_vertex(Graph::vertex_descriptor s, const Graph &g) { visited.push(s); }
+  std::queue<Graph::vertex_descriptor>& visited;
+};
+
+int main()
+{
+  boost::minstd_rand gen;
+  gen.seed(static_cast<unsigned int>(std::time(0)));
+  
+  // Define how large the graph will be
+  unsigned int n_verticies = 100;
+
+  // Define the probability of connecting verticies with an edge
+  float p_connection = 0.25;
+
+  // Create graph with 100 nodes and edges with probability 0.25
+  Graph g(ERGen(gen, n_verticies, p_connection), ERGen(), n_verticies);
+
+  // Give the nodes some names
+  const char* name[n_verticies]; 
+  for(int i = 0; i < n_verticies; i++)
+    {
+      name[i] = boost::to_string(i).c_str();
+    }
+
+  // Output a representation of the graph
+  boost::write_graphviz(std::cout, g, boost::make_label_writer(name));
+
+  // Designate a start point for breadth first search
+  Graph::vertex_descriptor start_vertex = *(boost::vertices(g).first);
+  std::queue<Graph::vertex_descriptor> q;
+  BFSVisitor vis(q);
+
+  // Perform the breadth first search and 
+  boost::breadth_first_search(g, start_vertex, boost::visitor(vis));
+  while (!vis.visited.empty()) {
+    std::cout << vis.visited.front() << std::endl;
+    vis.visited.pop();
+  }
+  
+  return 0;
+}

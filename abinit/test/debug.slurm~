@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH --partition debug
+#SBATCH --nodes 2
+#SBATCH --ntasks-per-node 4 # number of processors to allocate
+#SBATCH --ntasks-per-core 1
+#SBATCH --mail-user mfricke@unm.edu
+#SBATCH --mail-type all
+#SBATCH --job-name abinit
+
+module purge # make sure there are no lingering loaded modules, JIC
+# load module for Hopper
+module load intel abinit/9.6.1-qrve
+
+# the input file to use for the run
+export INPUTFILE=t41.in # XXX FIXME! XXX
+
+#export SLURM_OVERLAP=1
+
+#srun --mpi=pmi2 abinit $INPUTFILE
+mpirun abinit $INPUTFILE

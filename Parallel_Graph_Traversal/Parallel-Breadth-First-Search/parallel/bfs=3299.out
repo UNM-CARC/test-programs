@@ -1,0 +1,9 @@
+/users/mfricke/test_programs/Parallel_Graph_Traversal/Parallel-Breadth-First-Search/parallel
+wheeler024.alliance.unm.edu
+Mon Feb  7 15:33:39 MST 2022
+slurmstepd: error: execve(): /users/mfricke/test_programs/Parallel_Graph_Traversal/Parallel-Breadth-First-Search/parallel/./test_bfs: Exec format error
+slurmstepd: error: execve(): /users/mfricke/test_programs/Parallel_Graph_Traversal/Parallel-Breadth-First-Search/parallel/./test_bfs: Exec format error
+slurmstepd: error: execve(): /users/mfricke/test_programs/Parallel_Graph_Traversal/Parallel-Breadth-First-Search/parallel/./test_bfs: Exec format error
+slurmstepd: error: execve(): /users/mfricke/test_programs/Parallel_Graph_Traversal/Parallel-Breadth-First-Search/parallel/./test_bfs: Exec format error
+srun: error: wheeler024: tasks 0-3: Exited with exit code 8
+Mon Feb  7 15:33:40 MST 2022

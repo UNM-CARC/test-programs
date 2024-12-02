@@ -1,0 +1,8 @@
+MPI_COMPILE_FLAGS = $(shell mpic++ --showme:compile)
+MPI_LINK_FLAGS = $(shell mpic++ --showme:link)
+ 
+sieve: sieve.cpp
+	$(CC) $(MPI_COMPILE_FLAGS) sieve.cpp $(MPI_LINK_FLAGS) -lm -lstdc++ -o ../sieve
+
+clean:
+	rm ../sieve

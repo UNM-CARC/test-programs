@@ -1,0 +1,12 @@
+Wheeler Portable Batch System Prologue
+Job Id: 1739345.wheeler-sn.alliance.unm.edu
+Username: mfricke
+Job 1739345.wheeler-sn.alliance.unm.edu running on nodes:
+wheeler304 wheeler303 
+
+prologue running on host: wheeler304
+Starting SSH Key Agent...
+Agent pid 3990
+Starting job: Fri Dec 17 15:35:06 MST 2021
+Job number: 1739345
+Wheeler Portable Batch System Epilogue

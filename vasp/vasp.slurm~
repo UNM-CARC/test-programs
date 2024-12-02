@@ -1,0 +1,17 @@
+#!/bin/bash
+# Sample Vasp Job Submission Script
+# Matthew Fricke, October 26th, 2020
+#SBATCH --job-name=vasp_sample
+#SBATCH --output=vasp_sample.out
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=64
+#SBATCH --mail-user=mfricke@unm.edu
+#SBATCH --mail-type=ALL
+#SBATCH --partition=community
+
+# Tell mpi how many MPI tasks to run. Parallelization can be done in various ways with vasp. 
+# Here we have one MPI task per node and instruct VASP to spawn 64 processes in the incar file.
+# We could also, for example, have twice the number of MPI tasks and halve the number of processes specified
+# in the incar file. Which is faster depends on the node archetecture and requires experimentation.
+srun -n $SLURM_JOB_NUM_NODES --cpu_bind=cores vasp_std
+

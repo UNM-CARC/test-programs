@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#PBS -l nodes=1:ppn=32
+#PBS -l walltime=00:30:00
+#PBS -N trial01
+#PBS -j oe
+#PBS -M jantolin@unm.edu
+#PBS -q bigmem-3TB
+
+module load namd
+cd ~/Documents/MolecularDynamics
+namd2 +p32 +devices 0 trial_01.conf > try01.log &

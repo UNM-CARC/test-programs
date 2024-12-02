@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#PBS -q debug
+#PBS -l nodes=2:ppn=8
+#PBS -l walltime=00:10:00
+#PBS -N sieve
+#PBS -S /bin/bash
+#PBS -j oe
+#PBS -M mfricke@carc.unm.edu
+#PBS -V
+ 
+module load openmpi-3.0.0-intel-18.0.2-7ejspct
+
+mpiexec -np $PBS_NP -machinefile $PBS_NODEFILE $PBS_O_WORKDIR/sieve 10000000
+
+

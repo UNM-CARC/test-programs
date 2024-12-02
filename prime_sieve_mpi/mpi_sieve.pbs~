@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#PBS -l nodes=2:ppn=16
+#PBS -l walltime=24:00:00
+#PBS -N sieve
+#PBS -S /bin/bash
+#PBS -j oe
+#PBS -V
+ 
+
+mpiexec $PBS_O_WORKDIR/sieve 10000000
+
+

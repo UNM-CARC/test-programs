@@ -1,0 +1,98 @@
+ running on   16 total cores
+ distrk:  each k-point on   16 cores,    1 groups
+ distr:  one band on    1 cores,   16 groups
+ vasp.6.2.1 16May21 (build Jul 07 2021 13:10:27) complex                        
+  
+ POSCAR found type information on POSCAR NaCl
+ POSCAR found :  2 types and       2 ions
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     You use a magnetic or noncollinear calculation, but did not specify     |
+|     the initial magnetic moment with the MAGMOM tag. Note that a            |
+|     default of 1 will be used for all atoms. This ferromagnetic setup       |
+|     may break the symmetry of the crystal, in particular it may rule        |
+|     out finding an antiferromagnetic solution. Thence, we recommend         |
+|     setting the initial magnetic moment manually or verifying carefully     |
+|     that this magnetic setup is desired.                                    |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+ scaLAPACK will be used
+ -----------------------------------------------------------------------------
+|                                                                             |
+|           W    W    AA    RRRRR   N    N  II  N    N   GGGG   !!!           |
+|           W    W   A  A   R    R  NN   N  II  NN   N  G    G  !!!           |
+|           W    W  A    A  R    R  N N  N  II  N N  N  G       !!!           |
+|           W WW W  AAAAAA  RRRRR   N  N N  II  N  N N  G  GGG   !            |
+|           WW  WW  A    A  R   R   N   NN  II  N   NN  G    G                |
+|           W    W  A    A  R    R  N    N  II  N    N   GGGG   !!!           |
+|                                                                             |
+|     For optimal performance we recommend to set                             |
+|       NCORE = 2 up to number-of-cores-per-socket                            |
+|     NCORE specifies how many cores store one orbital (NPAR=cpu/NCORE).      |
+|     This setting can greatly improve the performance of VASP for DFT.       |
+|     The default, NCORE=1 might be grossly inefficient on modern             |
+|     multi-core architectures or massively parallel machines. Do your        |
+|     own testing! More info at https://www.vasp.at/wiki/index.php/NCORE      |
+|     Unfortunately you need to use the default for GW and RPA                |
+|     calculations (for HF NCORE is supported but not extensively tested      |
+|     yet).                                                                   |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+ -----------------------------------------------------------------------------
+|                                                                             |
+|               ----> ADVICE to this user running VASP <----                  |
+|                                                                             |
+|     You have a (more or less) 'small supercell' and for smaller cells       |
+|     it is recommended to use the reciprocal-space projection scheme!        |
+|     The real-space optimization is not efficient for small cells and it     |
+|     is also less accurate ...                                               |
+|     Therefore, set LREAL=.FALSE. in the INCAR file.                         |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+ LDA part: xc-table for Pade appr. of Perdew
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ...
+ WAVECAR not read
+ augmentation electrons   14.0641552039357     
+ soft         electrons  0.000000000000000E+000
+ total        electrons   14.0641552039357     
+ augmentation electrons  9.165029133669466E-003
+ soft         electrons  0.000000000000000E+000
+ total        electrons  9.165029133669466E-003
+ augmentation electrons   23.8803078472535     
+ soft         electrons  0.000000000000000E+000
+ total        electrons   23.8803078472535     
+ augmentation electrons   22.9862436072535     
+ soft         electrons  0.000000000000000E+000
+ total        electrons   22.9862436072535     
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DAV:   1     0.282875958782E+02    0.28288E+02   -0.60798E+03  1280   0.566E+02
+DAV:   2    -0.571729236641E+01   -0.34005E+02   -0.33947E+02  1712   0.922E+01
+DAV:   3    -0.636555349134E+01   -0.64826E+00   -0.64826E+00  1472   0.163E+01
+DAV:   4    -0.636808520648E+01   -0.25317E-02   -0.25317E-02  2112   0.947E-01
+DAV:   5    -0.636808676721E+01   -0.15607E-05   -0.15608E-05  1520   0.151E-02    0.831E+00
+RMM:   6    -0.669306624699E+01   -0.32498E+00   -0.36109E-01  1514   0.479E+00    0.322E+00
+RMM:   7    -0.676113838591E+01   -0.68072E-01   -0.87281E-02  1409   0.215E+00    0.826E-01
+RMM:   8    -0.676737594299E+01   -0.62376E-02   -0.27323E-02  1618   0.914E-01    0.370E-01
+RMM:   9    -0.676995184317E+01   -0.25759E-02   -0.49128E-03  1558   0.501E-01    0.223E-01
+RMM:  10    -0.677179335761E+01   -0.18415E-02   -0.19605E-03  1524   0.326E-01    0.500E-02
+RMM:  11    -0.677196526769E+01   -0.17191E-03   -0.30561E-04  1505   0.139E-01    0.182E-02
+RMM:  12    -0.677199331843E+01   -0.28051E-04   -0.74481E-05  1405   0.585E-02
+   1 F= -.67719933E+01 E0= -.67719933E+01  d E =0.000000E+00  mag=    -0.0002
+ augmentation electrons   3.59155547834734     
+ soft         electrons   10.4681168862840     
+ total        electrons   14.0596723646313     
+ augmentation electrons  4.919379463074428E-005
+ soft         electrons   10.4681168862840     
+ total        electrons -1.614349551823794E-006

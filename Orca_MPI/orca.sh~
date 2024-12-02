@@ -1,0 +1,24 @@
+#!/usr/bin/bash
+# Matthew Fricke, April 10th, 2020
+#SBATCH --job-name=orca_test
+#SBATCH --output=test.out
+#SBATCH --ntasks=64
+#SBATCH --time=02:00:00
+#SBATCH --cpus-per-task=1
+#SBATCH --partition=tc
+#SBATCH --mail-user=mfricke@unm.edu
+#SBATCH --mail-type=ALL
+
+files=td_Th2-Pt-cat-tzvp.inp
+
+cd $SLURM_SUBMIT_DIR/
+
+#module load openmpi-3.1.4-intel-19.0.4-python3-ajqkuiv
+export PATH=".:$PATH"
+module load orca/4.2.1
+
+# Orca needs the full path when running in parallel
+full_orca_path=$(which orca)
+
+# Run Orca
+$full_orca_path $files

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#PBS -l nodes=10:ppn=8
+#PBS -l walltime=12:00:00
+#PBS -N run_01
+#PBS -j oe
+#PBS -M jantolin@unm.edu
+#PBS -q singleGPU
+
+module load NAMD
+cd ~/Documents/Molecular Dynamics/kf5_longOct2.pbs
+namd2 +p16 run.conf > run.log &
+
+

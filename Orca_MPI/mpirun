@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "MPIWRAPPER IN" "${@}"
+echo "MPIWRAPPER OUT" $(echo "${@}" | sed 's/^-np/-n/')
+exec srun --mpi=openmpi $(echo "${@}" | sed 's/^-np/-n/')

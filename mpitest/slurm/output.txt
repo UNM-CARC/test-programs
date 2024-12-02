@@ -1,0 +1,5 @@
+srun: error: If munged is up, restart with --num-threads=10
+srun: error: Munge encode failed: Failed to access "/opt/spack/opt/spack/linux-centos7-x86_64/intel-19.0.4/munge-0.5.13-tszercgpnm2mtat6tjex4jswfip6keo5/var/run/munge/munge.socket.2": No such file or directory
+srun: error: authentication: Socket communication error
+srun: error: Unable to confirm allocation for job 181116: Protocol authentication error
+srun: Check SLURM_JOB_ID environment variable. Expired or invalid job 181116
