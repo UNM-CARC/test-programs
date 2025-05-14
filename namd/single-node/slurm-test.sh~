@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --partition debug
+#SBATCH --job-name namd-test
+#SBATCH --time 00:05:00
+#SBATCH --nodes 1
+#SBATCH --ntasks-per-node 8
+#SBATCH --mail-user your@email.address
+#SBATCH --mail-type ALL
+
+module load namd/2.14
+
+# NAMD Binaries are not SLURM aware - so we use charmrun directly
+charmrun $(which namd2) +auto-provision ubq_ws_eq.conf

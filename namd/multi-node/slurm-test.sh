@@ -1,0 +1,31 @@
+#!/bin/bash
+#SBATCH --partition debug
+#SBATCH --job-name namd-test
+#SBATCH --time 00:10:00
+#SBATCH --nodes 2
+#SBATCH --ntasks-per-node 8
+#SBATCH --mem 2GB
+#SBATCH --mail-user your@email.address
+#SBATCH --mail-type ALL
+
+module load namd/3.0
+
+# Format node list for charm
+NAMD_NODEFILE=$(mktemp -p $SLURM_SUBMIT_DIR)
+echo group main > $NAMD_NODEFILE
+while IFS= read -r NODENAME; do
+    echo host $NODENAME >> $NAMD_NODEFILE
+done <<< $(cat $CARC_NODEFILE)
+
+# Remove duplicate lines
+echo "$(sort -u $NAMD_NODEFILE)" > $NAMD_NODEFILE
+
+echo Wrote NAMD node file to $NAMD_NODEFILE containing:
+cat $NAMD_NODEFILE
+
+# NAMD Binaries are not SLURM aware - so we use charmrun directly
+charmrun $(which namd2) +p$SLURM_NTASKS ++nodelist $NAMD_NODEFILE ubq_ws_eq.conf
+
+# Clean up the NAMD node file
+rm $NAMD_NODEFILE
+
