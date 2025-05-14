@@ -4,8 +4,9 @@
 #SBATCH --error=error.txt
 #SBATCH --time=00:02:00
 #SBATCH --mem=1G
+#SBATCH --ntasks=1
 #SBATCH --partition=debug
 
 module load bowtie
-bowtie-build test.fa test_index
-bowtie -q test_index reads.fq -S alignment.sam
+srun bowtie-build test.fa test_index
+srun bowtie -q test_index reads.fq -S alignment.sam
