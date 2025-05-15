@@ -8,7 +8,9 @@
 #SBATCH --nodes=2
 #SBATCH --ntasks=8
 
-module load petsc
+export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi2.so
+
+module load intel-oneapi-mpi/2021.15.0-6pwh petsc time
 
 # Assumes ex19 was included in the module
-/usr/bin/time -v srun -n 8 ex19 -snes_monitor
+$(which time)  -v srun -n 8 ./ex19 -snes_monitor
