@@ -8,5 +8,7 @@
 #SBATCH --nodes=2
 #SBATCH --ntasks=8
 
-module load tau
-/usr/bin/time -v srun -n 8 ./hello
+module load gcc/14.2.0-j33x tau time
+gcc -o hello hello.c
+
+$(which time) -v srun -n 8 hello
