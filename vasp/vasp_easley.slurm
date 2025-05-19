@@ -10,6 +10,7 @@
 #SBATCH --partition=debug
 #SBATCH --time=1:00:00
 
-module load vasp #update for easley
-mpirun -bootstrap slurm vasp_std
+module load vasp/6.4.3
+srun --mpi=pmi2 vasp_std
+
 
