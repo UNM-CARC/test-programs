@@ -1,12 +1,23 @@
 #!/bin/bash
 #SBATCH --job-name=test-lammps
-#SBATCH --output=output.txt
-#SBATCH --error=error.txt
 #SBATCH --time=00:05:00
-#SBATCH --mem=2G
 #SBATCH --partition=debug
-#SBATCH --nodes=2
 #SBATCH --ntasks=64
+#SBATCH --cpus-per-task=1
+#SBATCH --nodes=2
+#SBATCH --mem=248G
 
+module purge
+module load openmpi/4.1.7-3ilj
+module load fftw
 module load lammps
-/usr/bin/time -v srun -n 64 lmp -in in.lj
+
+# Expose OpenMP thread count explicitly
+export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
+export LD_LIBRARY_PATH=${FFTW_LIB}:${LD_LIBRARY_PATH}
+
+echo "MPI ranks: $SLURM_NTASKS"
+echo "CPUs per task: $SLURM_CPUS_PER_TASK"
+echo "OMP threads: $OMP_NUM_THREADS"
+
+srun lmp -in in.lj
