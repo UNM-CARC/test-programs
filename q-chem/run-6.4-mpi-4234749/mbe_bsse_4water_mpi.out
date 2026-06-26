@@ -1,0 +1,29 @@
+
+Running Job 1 of 1 /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/mbe_bsse_4water_mpi.in
+qchem /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/mbe_bsse_4water_mpi.in_1900924.0 /tmp/qchem-mfricke-4234749/run-6.4-mpi-4234749/ 2
+srun -n 2 /opt/local/q-chem/6.4/cpu/exe/qcprog.exe /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/mbe_bsse_4water_mpi.in_1900924.0 /tmp/qchem-mfricke-4234749/run-6.4-mpi-4234749/
+
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 6.4, Q-Chem, Inc., Pleasanton, CA (2025)
+
+ Q-Chem was unable to find a valid license file:
+  - If you have a license file, please make sure it is accessible at
+    /opt/local/q-chem/6.4/cpu/qcaux/license/qchem.license.dat
+  - If you do not have a license file, you can obtain a temporary license by
+    submitting an evaluation request at https://q-chem.com
+
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 6.4, Q-Chem, Inc., Pleasanton, CA (2025)
+
+ Q-Chem was unable to find a valid license file:
+  - If you have a license file, please make sure it is accessible at
+    /opt/local/q-chem/6.4/cpu/qcaux/license/qchem.license.dat
+  - If you do not have a license file, you can obtain a temporary license by
+    submitting an evaluation request at https://q-chem.com
+

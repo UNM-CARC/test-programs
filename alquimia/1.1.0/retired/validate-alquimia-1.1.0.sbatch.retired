@@ -1,0 +1,42 @@
+#!/bin/bash
+#SBATCH --job-name=test-alquimia-1.1.0
+#SBATCH --output=alquimia-1.1.0-test-%j.out
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --time=00:10:00
+
+set -euo pipefail
+
+module purge
+module use /opt/local/modules
+module load alquimia/1.1.0
+
+base_dir=/carc/scratch/projects/mfricke/mfricke2016402/test-programs/alquimia/1.1.0
+run_dir=${base_dir}/alquimia-1.1.0-test-${SLURM_JOB_ID}
+benchmark_dir=/users/mfricke/src/pflotran-elm-builds/3.9/alquimia/alquimia-dev/benchmarks/batch_chem
+
+mkdir -p "${run_dir}"
+cd "${run_dir}"
+
+install -m 0644 \
+  "${benchmark_dir}/calcite-short-pc-pflotran.cfg" \
+  "${benchmark_dir}/calcite-short-pflotran.in" \
+  "${benchmark_dir}/calcite.dat" \
+  .
+
+echo "Job ${SLURM_JOB_ID} running on $(hostname)"
+echo "ALQUIMIA_ROOT=${ALQUIMIA_ROOT}"
+echo "PETSC_DIR=${PETSC_DIR}"
+echo "LD_LIBRARY_PATH=${LD_LIBRARY_PATH}"
+echo "PFLOTRAN_ROOT=${PFLOTRAN_ROOT}"
+echo "PFLOTRAN_LIB=${PFLOTRAN_LIB}"
+
+test -x "${ALQUIMIA_ROOT}/bin/batch_chem"
+test -f "${ALQUIMIA_ROOT}/lib/libalquimia.so"
+test -f "${PFLOTRAN_LIB}"
+test -f "${PFLOTRAN_INC}/material_aux_module.mod"
+
+srun -n 1 "${ALQUIMIA_ROOT}/bin/batch_chem" calcite-short-pc-pflotran.cfg
+
+echo "Success!"
+echo "Alquimia validation completed in ${run_dir}"

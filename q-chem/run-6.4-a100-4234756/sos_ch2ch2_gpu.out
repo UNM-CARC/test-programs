@@ -1,0 +1,13 @@
+
+Running Job 1 of 1 /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/sos_ch2ch2_gpu.in
+qchem /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/sos_ch2ch2_gpu.in_2935457.0 /carc/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-a100-4234756/scratch/ 1
+/opt/local/q-chem/6.4/cuda/exe/qcprog.exe_s /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/sos_ch2ch2_gpu.in_2935457.0 /carc/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-a100-4234756/scratch/
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 6.4, Q-Chem, Inc., Pleasanton, CA (2025)
+
+ License file: /opt/local/q-chem/6.4/cuda/qcaux/license/qchem.license.dat
+ Unable to validate license on hopper059 SID 160C2AD202
+

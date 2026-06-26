@@ -1,0 +1,24 @@
+ISTART=0 ! calculation from beginning
+ICHARG = 2 ! charge from atoms
+
+Conected with electronic energy and SCF loop
+
+ISMEAR = -5 ! determines how the partial occupancies are set for each wavefunction - depends on type of material' 
+SIGMA = 0.05
+ISPIN = 2 ! electron can be upaired
+NELM = 100 ! max steps in electronic loop
+LORBIT = 11 ! 
+LREAL = Auto
+ALGO = Fast    ! alghoritm for solving electronic Sch.eq.
+EDIFF = 0.0001 ! convergence criteria
+PREC = Accurate
+
+Connected with geometry optimization i.e. moving of atoms
+
+IBRION = 2 ! determines how the ions are updated and move
+NSW = 0 ! number of optimization cycles
+
+outputs
+LWAVE = False
+LAECHG=.TRUE.
+

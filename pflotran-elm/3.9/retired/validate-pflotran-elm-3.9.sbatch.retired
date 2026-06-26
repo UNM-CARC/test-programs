@@ -1,0 +1,25 @@
+#!/bin/bash -l
+#SBATCH --job-name=test-pflotran-elm-3.9
+#SBATCH --partition=debug
+#SBATCH --time=00:05:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --output=pflotran-elm-3.9-test-%j.out
+
+set -euo pipefail
+
+script_dir="${SLURM_SUBMIT_DIR:-$PWD}"
+if [[ -f "$script_dir/pflotran-elm/3.9/validate-pflotran-elm-3.9.sbatch" ]]; then
+    script_dir="$script_dir/pflotran-elm/3.9"
+fi
+source "$script_dir/setup-pflotran-elm-3.9.sh"
+
+workdir="$script_dir/pflotran-elm-3.9-test-${SLURM_JOB_ID:-manual}"
+rm -rf "$workdir"
+mkdir -p "$workdir"
+
+srun -n 1 "$script_dir/check-pflotran-elm-3.9.sh" "$workdir" 2>&1 | tee "$workdir/pflotran-elm-validation.log"
+
+grep -q "PFLOTRAN-ELM validation checks passed." "$workdir/pflotran-elm-validation.log"
+grep -q "PFLOTRAN-ELM smoke test linked and initialized PETSc." "$workdir/pflotran-elm-validation.log"
+echo "PFLOTRAN-ELM validation completed in $workdir"

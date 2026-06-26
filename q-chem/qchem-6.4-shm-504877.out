@@ -1,0 +1,51 @@
+Q-Chem scratch defaults to /easley/scratch/users/mfricke. Override QCSCRATCH
+and optionally QCLOCALSCR/QCTMPDIR in your job script to use a different
+location. 
+You are running Q-Chem version: 6.4.0-1
+withsave === 1
+
+#
+# job setting
+#
+local host:  easley004
+current dir: /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-shm-504877
+input file:  /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/water_b3lyp.in
+output file: /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-shm-504877/water_b3lyp.out
+nprocs     : 1
+nthreads   : 4
+#
+# qchem installation setting
+#
+QC:          /opt/local/q-chem/6.4/cpu
+QCAUX:       /opt/local/q-chem/6.4/cpu/qcaux
+QCPROG:      /opt/local/q-chem/6.4/cpu/exe/qcprog.exe_s
+QCPROG_S:    /opt/local/q-chem/6.4/cpu/exe/qcprog.exe_s
+PARALLEL:    -DSERIAL
+QCMPI:       seq
+#
+# qchem directory setting
+#
+qcrun:       /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-shm-504877/scratch
+QCSCRATCH:   /easley/scratch/users/mfricke
+QCLOCALSCR:  
+QCTMPDIR:    /easley/scratch/users/mfricke
+QCFILEPREF:  /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-shm-504877/scratch
+QCSAVEDIR:   /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-shm-504877/scratch
+workdirs:    /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-shm-504877/scratch
+workdir0:    /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-shm-504877/scratch
+partmpdirs =  
+#
+# parallel setting
+#
+The number of nodes requested is optimal
+QCRSH:           ssh
+QCMPI:           seq
+QCMPIRUN:        
+QCMACHINEFILE:   /tmp/P3Gy0Fqvx6
+easley004
+
+#
+# env setting
+#
+exported envs:   QC QCAUX QCSCRATCH QCRUNNAME QCFILEPREF QCPROG QCPROG_S GUIFILE
+slurmstepd: error: *** JOB 504877 ON easley004 CANCELLED AT 2026-05-28T23:40:02 DUE TO TIME LIMIT ***

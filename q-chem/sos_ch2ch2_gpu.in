@@ -1,0 +1,23 @@
+$comment
+CH2CH2 GPU SOS-MP2 smoke test
+$end
+
+$molecule
+0 1
+ C1
+ C2  C1    1.3349600000
+ H1  C1    1.0847880000  C2  121.7118010000
+ H2  C1    1.0847880000  C2  121.7118010000  H1  180.0000000000
+ H3  C2    1.0847880000  C1  121.7118010000  H1    0.0000000000
+ H4  C2    1.0847880000  C1  121.7118010000  H1  180.0000000000
+$end
+
+$rem
+EXCHANGE               hf
+CORRELATION            sosmp2
+BASIS                  vdz(d)
+AUX_BASIS              rimp2-vdz
+PURECART               1111
+N_FROZEN_CORE          fc
+CUDA_SOSMP2            1
+$end

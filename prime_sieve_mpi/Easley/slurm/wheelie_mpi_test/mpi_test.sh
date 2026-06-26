@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#SBATCH --job-name=slurm_test
+#SBATCH --output=output.txt
+#
+#SBATCH --nodes=6
+#SBATCH --ntasks-per-node=30
+#SBATCH --time=00:05:00
+
+#SBATCH --mail-type=All
+#SBATCH --mail-user=mfricke@hpc.unm.edu
+
+module load openmpi-3.0.0-intel-18.0.2-i2ixnwj
+
+mpirun -np $SLURM_NTASKS $HOME/mpitest/sieve 10000
+

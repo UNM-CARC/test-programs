@@ -1,0 +1,22 @@
+$comment
+water B3LYP/6-31G* MPI smoke test via finite-difference gradient
+$end
+
+$molecule
+0 1
+O
+H1 O OH
+H2 O OH H1 HOH
+
+OH  = 0.947
+HOH = 105.5
+$end
+
+$rem
+JOBTYPE   FORCE
+IDERIV    0
+METHOD    B3LYP
+BASIS     6-31G*
+IPRINT    3
+INCDFT    FALSE
+$end

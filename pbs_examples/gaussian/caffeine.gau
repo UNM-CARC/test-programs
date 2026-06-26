@@ -1,6 +1,8 @@
-#Put Keywords Here, check Charge and Multiplicity.
+%NProcShared=8
+%Mem=2GB
+#p HF/3-21G SP
 
- 
+Caffeine single-point smoke test
 
 0  1
 C          -0.89719        -0.14526        -0.01712

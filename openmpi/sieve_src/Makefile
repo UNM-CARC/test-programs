@@ -1,7 +1,7 @@
-MPI_COMPILE_FLAGS = $(mpiicc --showme:compile)
-MPI_LINK_FLAGS = $(mpiicc --showme:link)
+MPI_COMPILE_FLAGS = $(shell mpicxx --showme:compile)
+MPI_LINK_FLAGS = $(shell mpicxx --showme:link)
 
-CC=mpiicc
+CC=mpicxx
 
 $(info Using $(CC) compiler) 
 

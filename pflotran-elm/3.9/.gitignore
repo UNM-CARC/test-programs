@@ -1,0 +1,7 @@
+pflotran-elm-3.9-test-*/
+pflotran-elm-3.9-test-*.out
+*.o
+*.mod
+pflotran_elm_smoke
+slurm-*.out
+slurm-*.err
