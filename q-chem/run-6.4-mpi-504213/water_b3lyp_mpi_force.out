@@ -1,0 +1,4 @@
+
+Running Job 1 of 1 /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/water_b3lyp_mpi_force.in
+qchem /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/water_b3lyp_mpi_force.in_352236.0 /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504213/scratch/ 2
+ invalid QCMPI (srun) option in runqchem

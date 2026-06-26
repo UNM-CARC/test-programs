@@ -1,0 +1,23 @@
+
+Running Job 1 of 1 /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/mbe_bsse_4water_mpi.in
+qchem /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/mbe_bsse_4water_mpi.in_1901758.0 /tmp/qchem-mfricke-4234758/run-6.4-mpi-4234758/ 2
+srun -n 2 /opt/local/q-chem/6.4/cpu/exe/qcprog.exe /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/mbe_bsse_4water_mpi.in_1901758.0 /tmp/qchem-mfricke-4234758/run-6.4-mpi-4234758/
+
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 6.4, Q-Chem, Inc., Pleasanton, CA (2025)
+
+ License file: /opt/local/q-chem/6.4/cpu/qcaux/license/qchem.license.dat
+ Unable to validate license on hopper011 SID C0EBBD550C
+
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 6.4, Q-Chem, Inc., Pleasanton, CA (2025)
+
+ License file: /opt/local/q-chem/6.4/cpu/qcaux/license/qchem.license.dat
+ Unable to validate license on hopper012 SID C0EBBD6E8C
+

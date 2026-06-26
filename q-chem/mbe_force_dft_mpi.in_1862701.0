@@ -1,0 +1,30 @@
+$comment
+Q-Chem 6.4 MPI smoke test based on the shipped MBE-force-DFT sample.
+$end
+
+$molecule
+0 1
+--
+0 1
+O    -1.28649717e-01     -2.42160087e+00     -3.43522306e+00
+H     5.19639715e-02     -2.91240566e+00     -4.23695578e+00
+H     7.32970515e-01     -2.17731939e+00     -3.05470285e+00
+--
+0 1
+O    -1.31498630e+00      9.16153572e-02     -2.84786204e+00
+H    -1.10069757e+00     -7.53085668e-01     -3.26605315e+00
+H    -2.27304527e+00      1.22515479e-01     -2.73952528e+00
+$end
+
+$rem
+JOBTYPE        FORCE
+METHOD         B97M-V
+BASIS          CC-PVDZ
+MANY_BODY_INT  TRUE
+SCF_MAX_CYCLES 1000
+SYM_IGNORE     TRUE
+$end
+
+$mbe
+ORDER 2
+$end

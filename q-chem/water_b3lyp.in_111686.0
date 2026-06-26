@@ -1,0 +1,20 @@
+$comment
+water  B3LYP/6-31G*  Single point energy
+$end
+
+$molecule
+0 1
+O
+H1 O OH
+H2 O OH H1 HOH
+
+OH  = 0.947
+HOH = 105.5
+$end
+
+$rem
+METHOD   B3LYP
+BASIS    6-31G*
+IPRINT   3
+INCDFT   FALSE
+$end

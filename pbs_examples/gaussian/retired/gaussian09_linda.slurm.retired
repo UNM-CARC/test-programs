@@ -1,0 +1,23 @@
+#!/bin/bash -l
+#SBATCH --job-name=test-gaussian09-linda
+#SBATCH --output=%x-%j.out
+#SBATCH --error=%x-%j.err
+#SBATCH --partition=debug
+#SBATCH --time=00:05:00
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=4G
+
+set -euo pipefail
+cd "${SLURM_SUBMIT_DIR:-$PWD}"
+
+module load gaussian/g09
+
+export GAUSS_LFLAGS="-v"
+export GAUSS_WDEF
+export GAUSS_PDEF="${SLURM_NTASKS}"
+GAUSS_WDEF="$(scontrol show hostnames "$SLURM_JOB_NODELIST" | paste -sd, -)"
+
+echo "Parallelizing ${GAUSS_PDEF} Linda workers across ${GAUSS_WDEF}."
+g09 HCl.gjf HCl.log

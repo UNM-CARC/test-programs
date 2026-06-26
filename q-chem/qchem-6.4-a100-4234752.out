@@ -1,0 +1,51 @@
+slurmstepd: error: NVML: Failed to get Compute running process count(3): Not Supported
+Q-Chem scratch defaults to /carc/scratch/users/mfricke. Override QCSCRATCH and
+optionally QCLOCALSCR/QCTMPDIR in your job script to use a different location. 
+You are running Q-Chem version: 6.4.0-1
+withsave === 1
+
+#
+# job setting
+#
+local host:  hopper059
+current dir: /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-a100-4234752
+input file:  /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/sos_ch2ch2_gpu.in
+output file: /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-a100-4234752/sos_ch2ch2_gpu.out
+nprocs     : 1
+nthreads   : 8
+#
+# qchem installation setting
+#
+QC:          /opt/local/q-chem/6.4/cuda
+QCAUX:       /opt/local/q-chem/6.4/cuda/qcaux
+QCPROG:      /opt/local/q-chem/6.4/cuda/exe/qcprog.exe_s
+QCPROG_S:    /opt/local/q-chem/6.4/cuda/exe/qcprog.exe_s
+PARALLEL:    -DSERIAL
+QCMPI:       seq
+#
+# qchem directory setting
+#
+qcrun:       /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-a100-4234752/scratch
+QCSCRATCH:   /carc/scratch/users/mfricke
+QCLOCALSCR:  
+QCTMPDIR:    /carc/scratch/users/mfricke
+QCFILEPREF:  /carc/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-a100-4234752/scratch
+QCSAVEDIR:   /carc/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-a100-4234752/scratch
+workdirs:    /carc/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-a100-4234752/scratch
+workdir0:    /carc/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-a100-4234752/scratch
+partmpdirs =  
+#
+# parallel setting
+#
+The number of nodes requested is optimal
+QCRSH:           ssh
+QCMPI:           seq
+QCMPIRUN:        
+QCMACHINEFILE:   /tmp/TmPlgOzSap
+hopper059
+
+#
+# env setting
+#
+exported envs:   QC QCAUX QCSCRATCH QCRUNNAME QCFILEPREF QCPROG QCPROG_S GUIFILE
+Error in Q-Chem run part 1

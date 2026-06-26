@@ -1,0 +1,56 @@
+Q-Chem scratch defaults to /carc/scratch/users/mfricke. Override QCSCRATCH and
+optionally QCLOCALSCR/QCTMPDIR in your job script to use a different location. 
+To request GPUs, add --gpus-per-node X or --gpus X, where X is the desired number of GPUs.
+Job 4234751 running on hopper[011-012]
+You are running Q-Chem version: 6.4.0-1
+withsave === 1
+
+#
+# job setting
+#
+local host:  hopper011
+current dir: /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-4234751
+input file:  /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/mbe_bsse_4water_mpi.in
+output file: /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-4234751/mbe_bsse_4water_mpi.out
+nprocs     : 2
+nthreads   : 4
+#
+# qchem installation setting
+#
+QC:          /opt/local/q-chem/6.4/cpu
+QCAUX:       /opt/local/q-chem/6.4/cpu/qcaux
+QCPROG:      /opt/local/q-chem/6.4/cpu/exe/qcprog.exe
+QCPROG_S:    /opt/local/q-chem/6.4/cpu/exe/qcprog.exe_s
+PARALLEL:    -DPARALLEL
+QCMPI:       slurm
+#
+# qchem directory setting
+#
+qcrun:       run-6.4-mpi-4234751
+QCSCRATCH:   /carc/scratch/users/mfricke
+QCLOCALSCR:  /tmp/qchem-mfricke-4234751
+QCTMPDIR:    /tmp/qchem-mfricke-4234751
+QCFILEPREF:  /tmp/qchem-mfricke-4234751/run-6.4-mpi-4234751
+QCSAVEDIR:   /carc/scratch/users/mfricke/run-6.4-mpi-4234751
+workdirs:    /tmp/qchem-mfricke-4234751/run-6.4-mpi-4234751.0 -- /tmp/qchem-mfricke-4234751/run-6.4-mpi-4234751.1
+workdir0:    /tmp/qchem-mfricke-4234751/run-6.4-mpi-4234751.0
+partmpdirs =  
+#
+# parallel setting
+#
+Warning: more nodes requested than necessary
+QCRSH:           ssh
+QCMPI:           slurm
+QCMPIRUN:        srun
+QCMACHINEFILE:   /tmp/UbfxhpB190
+hopper011
+hopper012
+
+#
+# env setting
+#
+exported envs:   QC QCAUX QCSCRATCH QCRUNNAME QCFILEPREF QCPROG QCPROG_S GUIFILE
+srun: error: hopper011: task 0: Exited with exit code 247
+srun: error: hopper012: task 1: Exited with exit code 247
+copy savedir ...
+cp: cannot stat '/tmp/qchem-mfricke-4234751/run-6.4-mpi-4234751.0/*': No such file or directory

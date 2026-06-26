@@ -51,9 +51,10 @@ typat 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1           # This atom is of type 1, that i
 #################################################################
 #Simulation parameters
 ##################################################################
-ecut  50.0                       # Maximal kinetic energy cut-off, in Hartree
+ecut  10.0                       # Maximal kinetic energy cut-off, in Hartree
 ixc 11                          # Perdew-Burke-Ernzerhof GGA functional [Perdew1996]
-ngkpt    16 16 16                # Sampling of Brillouin zone in homogenous manner like
+ngkpt    1 1 1                   # Minimal grid for a GPU smoke test
+istwfk   2                       # Required for Gamma-only OpenMP GPU run
                                 # Monkhorst-Pack grids
 #nshiftk 1                       # number of shifted grids
 #shiftk  0.5 0.5 0.5
@@ -61,8 +62,8 @@ ngkpt    16 16 16                # Sampling of Brillouin zone in homogenous mann
 #################################################################
 #SCF procedure
 ##################################################################
-nstep 5000                        # Maximal number of SCF cycles
-toldfe 1.0d-10                  # Total energy tolerance 
+nstep 3                         # Maximal number of SCF cycles
+toldfe 1.0d-4                   # Total energy tolerance 
 
 #################################################################
 #optcell 0

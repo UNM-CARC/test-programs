@@ -1,0 +1,59 @@
+Q-Chem scratch defaults to /easley/scratch/users/mfricke. Override QCSCRATCH
+and optionally QCLOCALSCR/QCTMPDIR in your job script to use a different
+location. 
+You are running Q-Chem version: 6.4.0-1
+withsave === 1
+
+#
+# job setting
+#
+local host:  easley002
+current dir: /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504478
+input file:  /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/mbe_bsse_4water_mpi.in
+output file: /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504478/mbe_bsse_4water_mpi.out
+nprocs     : 2
+nthreads   : 4
+#
+# qchem installation setting
+#
+QC:          /opt/local/q-chem/6.4/cpu
+QCAUX:       /opt/local/q-chem/6.4/cpu/qcaux
+QCPROG:      /opt/local/q-chem/6.4/cpu/exe/qcprog.exe
+QCPROG_S:    /opt/local/q-chem/6.4/cpu/exe/qcprog.exe_s
+PARALLEL:    -DPARALLEL
+QCMPI:       slurm
+#
+# qchem directory setting
+#
+qcrun:       /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504478/scratch
+QCSCRATCH:   /easley/scratch/users/mfricke
+QCLOCALSCR:  
+QCTMPDIR:    /easley/scratch/users/mfricke
+QCFILEPREF:  /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504478/scratch
+QCSAVEDIR:   /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504478/scratch
+workdirs:    /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504478/scratch.0 -- /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504478/scratch.1
+workdir0:    /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504478/scratch.0
+partmpdirs =  
+#
+# parallel setting
+#
+Warning: more nodes requested than necessary
+QCRSH:           ssh
+QCMPI:           slurm
+QCMPIRUN:        srun
+QCMACHINEFILE:   /tmp/RIvY7AeQd8
+easley002
+easley050
+
+#
+# env setting
+#
+exported envs:   QC QCAUX QCSCRATCH QCRUNNAME QCFILEPREF QCPROG QCPROG_S GUIFILE
+terminate called after throwing an instance of 'libstore::file_error'
+  what():  Problem when trying to open or create /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504478/scratch/qarchive.h5: Unable to create file /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504478/scratch/qarchive.h5 (File accessibility) Unable to open file
+The metadata in the file header may be corrupt.
+
+srun: error: easley050: task 1: Aborted (core dumped)
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 504478.0 ON easley002 CANCELLED AT 2026-05-28T21:30:32 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 504478 ON easley002 CANCELLED AT 2026-05-28T21:30:32 DUE TO TIME LIMIT ***

@@ -1,0 +1,50 @@
+You are running Q-Chem version: 6.4.0-1
+withsave === 1
+
+#
+# job setting
+#
+local host:  easley042
+current dir: /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504213
+input file:  /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/water_b3lyp_mpi_force.in
+output file: /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504213/water_b3lyp_mpi_force.out
+nprocs     : 2
+nthreads   : 32
+#
+# qchem installation setting
+#
+QC:          /opt/local/q-chem/6.4/cpu
+QCAUX:       /opt/local/q-chem/6.4/cpu/qcaux
+QCPROG:      /opt/local/q-chem/6.4/cpu/exe/qcprog.exe
+QCPROG_S:    /opt/local/q-chem/6.4/cpu/exe/qcprog.exe_s
+PARALLEL:    -DPARALLEL
+QCMPI:       srun
+#
+# qchem directory setting
+#
+qcrun:       /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504213/scratch
+QCSCRATCH:   /easley/scratch/users/mfricke
+QCLOCALSCR:  
+QCTMPDIR:    /easley/scratch/users/mfricke
+QCFILEPREF:  /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504213/scratch
+QCSAVEDIR:   /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504213/scratch
+workdirs:    /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504213/scratch.0 -- /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504213/scratch.1
+workdir0:    /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504213/scratch.0
+partmpdirs =  
+#
+# parallel setting
+#
+Warning: more nodes requested than necessary
+QCRSH:           ssh
+QCMPI:           srun
+QCMPIRUN:        srun
+QCMACHINEFILE:   /tmp/ArvRe1RSH7
+easley042
+easley043
+
+#
+# env setting
+#
+exported envs:   QC QCAUX QCSCRATCH QCRUNNAME QCFILEPREF QCPROG QCPROG_S GUIFILE
+copy savedir ...
+cp: cannot stat '/easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-504213/scratch.0/*': No such file or directory

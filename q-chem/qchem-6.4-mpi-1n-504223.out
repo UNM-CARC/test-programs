@@ -1,0 +1,55 @@
+You are running Q-Chem version: 6.4.0-1
+withsave === 1
+
+#
+# job setting
+#
+local host:  easley004
+current dir: /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-1n-504223
+input file:  /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/mbe_bsse_4water_mpi.in
+output file: /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-1n-504223/mbe_bsse_4water_mpi.out
+nprocs     : 2
+nthreads   : 4
+#
+# qchem installation setting
+#
+QC:          /opt/local/q-chem/6.4/cpu
+QCAUX:       /opt/local/q-chem/6.4/cpu/qcaux
+QCPROG:      /opt/local/q-chem/6.4/cpu/exe/qcprog.exe
+QCPROG_S:    /opt/local/q-chem/6.4/cpu/exe/qcprog.exe_s
+PARALLEL:    -DPARALLEL
+QCMPI:       slurm
+#
+# qchem directory setting
+#
+qcrun:       /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-1n-504223/scratch
+QCSCRATCH:   /easley/scratch/users/mfricke
+QCLOCALSCR:  
+QCTMPDIR:    /easley/scratch/users/mfricke
+QCFILEPREF:  /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-1n-504223/scratch
+QCSAVEDIR:   /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-1n-504223/scratch
+workdirs:    /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-1n-504223/scratch.0 -- /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-1n-504223/scratch.1
+workdir0:    /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-1n-504223/scratch.0
+partmpdirs =  
+#
+# parallel setting
+#
+The number of nodes requested is optimal
+QCRSH:           ssh
+QCMPI:           slurm
+QCMPIRUN:        srun
+QCMACHINEFILE:   /tmp/AkGZkMzmMQ
+easley004
+easley004
+
+#
+# env setting
+#
+exported envs:   QC QCAUX QCSCRATCH QCRUNNAME QCFILEPREF QCPROG QCPROG_S GUIFILE
+could not remove /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-1n-504223/scratch/ZMAT-UNPROC
+FileMan error: End of file reached prematurely reading (100) bytes in file FM_GET_LEN
+ Path: /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-mpi-1n-504223/scratch/4.0: No such file or directory
+srun: error: easley004: task 1: Exited with exit code 1
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 504223.0 ON easley004 CANCELLED AT 2026-05-28T21:07:31 DUE TO TIME LIMIT ***
+slurmstepd: error: *** JOB 504223 ON easley004 CANCELLED AT 2026-05-28T21:07:31 DUE TO TIME LIMIT ***

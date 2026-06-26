@@ -1,12 +1,13 @@
-MPI_COMPILE_FLAGS = $(mpiicc --showme:compile)
-MPI_LINK_FLAGS = $(mpiicc --showme:link)
+MPI_COMPILE_FLAGS = $(mpic++ --showme:compile)
+MPI_LINK_FLAGS = $(mpic++ --showme:link)
 
-CC=mpiicc
+CC=mpic++
+OUTPUT ?= ../sieve
 
 $(info Using $(CC) compiler) 
 
 sieve: sieve.cpp
-	$(CC) $(MPI_COMPILE_FLAGS) sieve.cpp $(MPI_LINK_FLAGS) -lm -lstdc++ -o ../sieve
+	$(CC) $(MPI_COMPILE_FLAGS) sieve.cpp $(MPI_LINK_FLAGS) -lm -lstdc++ -o $(OUTPUT)
 
 clean:
-	rm ../sieve
+	rm -f $(OUTPUT)

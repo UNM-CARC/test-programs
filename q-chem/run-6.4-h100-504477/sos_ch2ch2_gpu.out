@@ -1,0 +1,386 @@
+
+Running Job 1 of 1 /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/sos_ch2ch2_gpu.in
+qchem /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/sos_ch2ch2_gpu.in_3639044.0 /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-h100-504477/scratch/ 1
+/opt/local/q-chem/6.4/cuda/exe/qcprog.exe_s /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/sos_ch2ch2_gpu.in_3639044.0 /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-h100-504477/scratch/
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 6.4, Q-Chem, Inc., Pleasanton, CA (2025)
+
+ License issued to: SRG Susan Atlas, University of New Mexico
+
+ E. Epifanovsky,  A. T. B. Gilbert,  Xintian Feng,  Joonho Lee,  Yuezhi Mao,  
+ N. Mardirossian,  P. Pokhilko,  A. White,  M. Wormit,  M. P. Coons,  
+ A. L. Dempwolff,  Zhengting Gan,  D. Hait,  P. R. Horn,  L. D. Jacobson,  
+ I. Kaliman,  J. Kussmann,  A. W. Lange,  Ka Un Lao,  D. S. Levine,  Jie Liu,  
+ S. C. McKenzie,  A. F. Morrison,  K. D. Nanda,  F. Plasser,  D. R. Rehn,  
+ M. L. Vidal,  Zhi-Qiang You,  Ying Zhu,  Huseyin Aksu,  B. Alam,  
+ B. Albrecht,  A. Aldossary,  E. Alguire,  J. H. Andersen,  
+ J. E. Arias-Martinez,  V. Athavale,  F. Ballesteros,  D. Barton,  K. Begam,  
+ A. Behn,  N. Bellonzi,  Y. A. Bernard,  E. J. Berquist,  H. Burton,  
+ S. Camps,  A. Carreras,  K. Carter-Fenk,  Mathew Chow,  Jeng-Da Chai,  
+ Arnab Chakraborty,  Romit Chakraborty,  Chandrima Chakravarty,  Junhan Chen,  
+ A. D. Chien,  K. D. Closser,  V. Cofer-Shabica,  L. Cunha,  S. Dasgupta,  
+ Jia Deng,  Joseph Dickinson,  M. de Wergifosse,  M. Diedenhofen,  
+ L. B. Dittmer,  Hainam Do,  Wenjie Dou,  S. Ehlert,  Po-Tung Fang,  
+ Anthuan Ferino-Pérez,  S. Fatehi,  Qingguo Feng,  Jonathan Fetherolf,  
+ T. Friedhoff,  Thomas Froitzheim,  Sarai Folkestad,  B. Ganoe,  J. Gayvert,  
+ Qinghui Ge,  G. Gidofalvi,  M. Gimferrer,  G. Giudetti,  M. Goldey,  
+ Montgomery Gray,  J. Gomes,  C. Gonzalez-Espinoza,  S. Gulania,  A. Gunina,  
+ J. A. Gyamfi,  M. W. D. Hanson-Heine,  P. H. P. Harbach,  A. W. Hauser,  
+ M. F. Herbst,  M. Hernandez Vera,  M. Hodecker,  Z. C. Holden,  S. Houck,  
+ Xunkun Huang,  Kerwin Hui,  B. C. Huynh,  K. Ikeda,  M. Ivanov,  
+ Nayanthara K. Jayadev,  Hyunjun Ji,  Zuxin Jin,  Hanjie Jiang,  
+ Subrata Jana,  B. Kaduk,  S. Kaehler,  Richard Kang,  K. Khistyaev,  
+ Jaehoon Kim,  Yongbin Kim,  P. Klunzinger,  Z. Koczor-Benda,  
+ Joong Hoon Koh,  Elena Kolodzeiski,  D. Kosenkov,  Saikiran Kotaru,  
+ L. Koulias,  T. Kowalczyk,  C. M. Krauter,  K. Kue,  A. Kunitsa,  T. Kus,  
+ A. Landau,  C. W. Lander,  K. V. Lawler,  D. Lefrancois,  S. Lehtola,  
+ Rain Li,  Shaozhi Li,  Tao E. Li,  Yi-Pei Li,  Jiashu Liang,  M. Liebenthal,  
+ Hung-Hsuan Lin,  You-Sheng Lin,  Fenglai Liu,  Kuan-Yu Liu,  Xiao Liu,  
+ M. Loipersberger,  A. Luenser,  C. Malbon,  Aniket Mandal,  Manisha,  
+ A. Manjanath,  P. Manohar,  E. Mansoor,  S. F. Manzer,  Shan-Ping Mao,  
+ A. V. Marenich,  T. Markovich,  S. Mason,  F. Matz,  S. A. Maurer,  
+ Samuel May,  Alexandra McIsaac,  P. F. McLaughlin,  M. F. S. J. Menger,  
+ J.-M. Mewes,  S. A. Mewes,  R. E. Moorby,  P. Morgante,  
+ Mohammad Mostafanejad,  Madhubani Mukherjee,  J. W. Mullinax,  Quyen Nguyen,  
+ Avik Kumar Ojha,  K. J. Oosterbaan,  Eno Paenurk,  Xiaoliang Pan,  G. Paran,  
+ V. Parravicini,  R. L. Patterson,  Alexander C. Paul,  Suranjan K. Paul,  
+ F. Pavosevic,  Zheng Pei,  P. Pokhilko,  S. Prager,  E. I. Proynov,  
+ E. Ramos,  B. Rana,  A. E. Rask,  A. Rettig,  R. M. Richard,  F. Rob,  
+ E. Rossomme,  S. Roy,  T. Scheele,  M. Scheurer,  M. Schneider,  
+ P. E. Schneider,  Tim K. Schramm,  N. Sergueev,  S. M. Sharada,  
+ Hengyuan Shen,  W. Skomorowski,  D. W. Small,  C. J. Stein,  
+ Alistair J. Sterling,  Yingli Su,  Yu-Chuan Su,  E. J. Sundstrom,  
+ J. Talbot,  J. A. Tan,  Zhen Tao,  Hung-Hsuan Teh,  J. Thirman,  C. Titeca,  
+ N. Tkachenko,  Hung-Yi Tsai,  T. Tsuchimochi,  N. M. Tubman,  C. Utku,  
+ S. P. Veccham,  O. Vydrov,  Z. Wang,  Markus G. S. Weiss,  Rahel Weiss,  
+ J. Wenzel,  Jonathan Wong,  J. Witte,  H. Wu,  Yanze Wu,  A. Yamada,  
+ Chou-Hsun Yang,  Kun Yao,  S. Yeganeh,  S. R. Yost,  Qi Yu,  A. Zech,  
+ F. Zeller,  Chongxiao Zhao,  T. Zhao,  Igor Ying Zhang,  Xing Zhang,  
+ Yu Zhang,  Zeyi Zhang,  D. Zuev,  A. Aspuru-Guzik,  A. T. Bell,  
+ N. A. Besley,  K. B. Bravaya,  B. R. Brooks,  D. Casanova,  Jeng-Da Chai,  
+ Hsing-Ta Chen,  S. Coriani,  C. J. Cramer,  A. E. DePrince, III,  
+ R. A. DiStasio Jr.,  A. Dreuw,  B. D. Dunietz,  T. R. Furlani,  
+ W. A. Goddard III,  S. Grimme,  S. Hammes-Schiffer,  T. Head-Gordon,  
+ W. J. Hehre,  Chao-Ping Hsu,  T.-C. Jagau,  Yousung Jung,  A. Klamt,  
+ Jing Kong,  D. S. Lambrecht,  Xiangyuan Li,  WanZhen Liang,  N. J. Mayhall,  
+ C. W. McCurdy,  J. B. Neaton,  T. Neudecker,  C. Ochsenfeld,  
+ J. A. Parkhill,  R. Peverati,  V. A. Rassolov,  Haisheng Ren,  Yihan Shao,  
+ L. V. Slipchenko,  R. P. Steele,  J. E. Subotnik,  A. J. W. Thom,  
+ A. Tkatchenko,  D. G. Truhlar,  T. Van Voorhis,  Fan Wang,  
+ T. A. Wesolowski,  K. B. Whaley,  H. L. Woodcock III,  P. M. Zimmerman,  
+ S. Faraji,  P. M. W. Gill,  M. Head-Gordon,  J. M. Herbert,  A. I. Krylov
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  B. Austin,  R. Baer,  J. Baker,  G. J. O. Beran,  
+ K. Brandhorst,  S. T. Brown,  E. F. C. Byrd,  Arup K. Chakraborty,  
+ G. K. L. Chan,  Chun-Min Chang,  Yunqing Chen,  C.-L. Cheng,  
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,  
+ R. J. Doerksen,  A. D. Dutoi,  R. G. Edgar,  J. Fosso-Tande,  
+ L. Fusti-Molnar,  D. Ghosh,  A. Ghysels,  A. Golubeva-Zadorozhnaya,  
+ J. Gonthier,  M. S. Gordon,  S. R. Gwaltney,  G. Hawkins,  J. E. Herr,  
+ A. Heyden,  S. Hirata,  E. G. Hohenstein,  G. Kedziora,  F. J. Keil,  
+ C. Kelley,  Jihan Kim,  R. A. King,  R. Z. Khaliullin,  P. P. Korambath,  
+ W. Kurlancheek,  A. Laurent,  A. M. Lee,  M. S. Lee,  S. V. Levchenko,  
+ Ching Yeh Lin,  D. Liotard,  E. Livshits,  R. C. Lochan,  I. Lotan,  
+ L. A. Martinez-Martinez,  P. E. Maslen,  N. Nair,  D. P. O'Neill,  
+ D. Neuhauser,  E. Neuscamman,  C. M. Oana,  R. Olivares-Amaya,  R. Olson,  
+ T. M. Perrine,  B. Peters,  P. A. Pieniazek,  A. Prociuk,  Y. M. Rhee,  
+ J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,  H. F. Schaefer III,  
+ M. W. Schmidt,  N. E. Schultz,  S. Sharma,  N. Shenvi,  C. D. Sherrill,  
+ A. C. Simmonett,  A. Sodt,  T. Stein,  D. Stuck,  K. S. Thanthiriwatte,  
+ V. Vanovschi,  L. Vogt,  Tao Wang,  A. Warshel,  M. A. Watson,  
+ C. F. Williams,  Q. Wu,  X. Xu,  Jun Yang,  W. Zhang,  Yan Zhao
+
+   Please cite Q-Chem as follows:
+  "Software for the frontiers of quantum chemistry:
+   An overview of developments in the Q-Chem 5 package"
+   J. Chem. Phys. 155, 084801 (2021)
+   https://doi.org/10.1063/5.0055522 (open access)
+
+ Q-Chem 6.4.0 for Intel X86 EM64T Linux
+
+ Parts of Q-Chem use Armadillo 12.8.2 (Cortisol Injector).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Thu May 28 21:15:33 2026  
+
+ Host: 
+0
+
+ Scratch files written to /easley/scratch/users/mfricke//carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-h100-504477/scratch//
+ Executable: /opt/local/q-chem/6.4/cuda/exe/qcprog.exe_s
+ Number of threads = 8
+ Dec1625 |scratch|qcdevops|jenkins|workspace|build_RNUM -1
+ Processing $rem in /opt/local/q-chem/6.4/cuda/config/preferences:
+ Processing $rem in /carc/scratch/projects/mfricke/mfricke2016402/test-programs/q-chem/run-6.4-h100-504477/.qchemrc:
+
+ Checking the input file for inconsistencies... 	...done.
+ tid: 0x0 [2026.05.28-21:15:34.125] [INFO] Begin brianAPIInit
+ tid: 0x0 [2026.05.28-21:15:34.126] [INFO] Detected compatible BrianQC interface version 5
+ tid: 0x0 [2026.05.28-21:15:34.126] [INFO] Reading config from /opt/local/q-chem/6.4/cuda/brianqc_qchem/config.json
+ tid: 0x0 [2026.05.28-21:15:34.127] [INFO] Setting Brian root dir to /opt/local/q-chem/6.4/cuda/brianqc_qchem
+ tid: 0x0 [2026.05.28-21:15:34.127] [INFO] Found kernel DB in config: /opt/local/q-chem/6.4/cuda/brianqc_qchem/integrators/6336139264-1715983310_kernel_g_v1_5_0_96dfbcf834_CUDA_Tesla_H100.db
+ tid: 0x0 [2026.05.28-21:15:34.128] [INFO] Found DFT DB in config: /opt/local/q-chem/6.4/cuda/brianqc_qchem/integrators/13385728-1716812277_dft_kernel_v1_5_0_c0ea4e0e4a_CUDA_Tesla_H100.db
+ tid: 0x0 [2026.05.28-21:15:34.128] [INFO] No MM DBs specified in config, using the default: /opt/local/q-chem/6.4/cuda/brianqc_qchem/integrators/mm.db
+ tid: 0x0 [2026.05.28-21:15:34.128] [WARNING] MM features will not be available, because the MM DB does not exist: /opt/local/q-chem/6.4/cuda/brianqc_qchem/integrators/mm.db
+ tid: 0x0 [2026.05.28-21:15:34.129] [INFO] Start BrianQC module initialization
+ tid: 0x0 [2026.05.28-21:15:34.143] [INFO] GPU 0# NVIDIA_H100_NVL_GPU-8a8de1fd-1ce4-a2e0-679a-c2d99dcf490f
+ tid: 0x0 [2026.05.28-21:15:34.158] [SYSTEM] BrianQC version: v1_5_1_7f6b4fa0eb licensed to: Trial User
+ tid: 0x0 [2026.05.28-21:15:34.166] [SYSTEM] Visit us at: https://brianqc.com
+ tid: 0x0 [2026.05.28-21:15:34.176] [SYSTEM] BrianQC copyright Streamnovation Ltd. 2013-2022
+ tid: 0x0 [2026.05.28-21:15:34.186] [SYSTEM] Contributors: Gy. Cserey, B. Czetenyi, A. Jasz, G. Kis, I. Ladjanszki, A. Rak, G. J. Tornai, A. Vas
+ tid: 0x0 [2026.05.28-21:15:34.221] [INFO] Signing in to license server: license.brainqc.com 443
+ tid: 0x0 [2026.05.28-21:15:34.243] [INFO] Scratch dir is disabled, storing everything in memory
+ tid: 0x0 [2026.05.28-21:15:34.578] [INFO] Detected device: CPU
+ tid: 0x0 [2026.05.28-21:15:34.578] [INFO] Detected device: CUDA NVIDIA H100 NVL#0000:E1:00.0
+ tid: 0x0 [2026.05.28-21:15:34.585] [INFO] Allocating 3 threads for GPU: CUDA NVIDIA H100 NVL#0000:E1:00.0 on node 0
+ tid: 0x0 [2026.05.28-21:15:39.444] [INFO] Used GPU count: 1
+ tid: 0x0 [2026.05.28-21:15:39.456] [INFO] End BrianQC module initialization
+ tid: 0x0 [2026.05.28-21:15:39.464] [INFO] End brianAPIInit
+ tid: 0x0 [2026.05.28-21:15:39.464] [INFO] Running preliminary BrianQC license check...
+ tid: 0x0 [2026.05.28-21:15:39.465] [INFO] Preliminary BrianQC license check passed
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$comment
+CH2CH2 GPU SOS-MP2 smoke test
+$end
+
+$molecule
+0 1
+C1
+C2  C1    1.3349600000
+H1  C1    1.0847880000  C2  121.7118010000
+H2  C1    1.0847880000  C2  121.7118010000  H1  180.0000000000
+H3  C2    1.0847880000  C1  121.7118010000  H1    0.0000000000
+H4  C2    1.0847880000  C1  121.7118010000  H1  180.0000000000
+$end
+
+$rem
+EXCHANGE               hf
+CORRELATION            sosmp2
+BASIS                  vdz(d)
+AUX_BASIS              rimp2-vdz
+PURECART               1111
+N_FROZEN_CORE          fc
+CUDA_SOSMP2            1
+$end
+--------------------------------------------------------------
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      C       0.6674800000    -0.0000000000    -0.0000000000
+    2      C      -0.6674800000     0.0000000000     0.0000000000
+    3      H       1.2376954259     0.9228322562     0.0000000000
+    4      H       1.2376954259    -0.9228322562    -0.0000000000
+    5      H      -1.2376954259     0.9228322562     0.0000000000
+    6      H      -1.2376954259    -0.9228322562    -0.0000000000
+ ----------------------------------------------------------------
+ Molecular Point Group                 D2h   NOp =  8
+ Largest Abelian Subgroup              D2h   NOp =  8
+ Nuclear Repulsion Energy =          33.32113115 hartrees
+ There are        8 alpha and        8 beta electrons
+
+ Q-Chem warning in module forms1/BasisType.C, line 3008:
+
+ You are not using the predefined 5D/6D in this basis set.
+
+ Requested basis set is VDZ(d)
+ There are 20 shells and 36 basis functions
+
+ Total QAlloc Memory Limit   8000 MB
+ Mega-Array Size       188 MB
+ MEM_STATIC part       192 MB
+
+
+                       Distance Matrix (Angstroms)
+             C (  1)   C (  2)   H (  3)   H (  4)   H (  5)
+   C (  2)  1.334960
+   H (  3)  1.084788  2.116911
+   H (  4)  1.084788  2.116911  1.845665
+   H (  5)  2.116911  1.084788  2.475391  3.087724
+   H (  6)  2.116911  1.084788  3.087724  2.475391  1.845665
+ 
+ Requested basis set is rimp2-VDZ
+ There are 56 shells and 152 basis functions
+ A cutoff of  1.0D-09 yielded    210 shell pairs
+ There are       698 function pairs (       783 Cartesian)
+ Smallest overlap matrix eigenvalue = 4.72E-03
+
+ Scale SEOQF with 1.000000e+00/1.000000e+00/1.000000e+00
+
+ Standard Electronic Orientation quadrupole field applied
+ Nucleus-field energy     =     0.0000000065 hartrees
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+ SAD guess density has 16.000000 electrons
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky,
+  Bang C. Huynh
+ -----------------------------------------------------------------------
+ Hartree-Fock
+ tid: 0x0 [2026.05.28-21:15:39.872] [INFO] Re-init GPU for small molecule mode
+ tid: 0x0 [2026.05.28-21:15:39.994] [INFO] Detected device: CPU
+ tid: 0x0 [2026.05.28-21:15:39.994] [INFO] Detected device: CUDA NVIDIA H100 NVL#0000:E1:00.0
+ tid: 0x0 [2026.05.28-21:15:39.995] [INFO] Allocating 1 threads for GPU: CUDA NVIDIA H100 NVL#0000:E1:00.0 on node 0
+ tid: 0x0 [2026.05.28-21:15:39.995] [INFO] Used GPU count: 1
+ ---- BrianQC HCore successfully initialized ---- 
+ ---- BrianQC J/K successfully initialized ---- 
+BrianQC JK build time 0.0000000000 (s)
+ A restricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-05
+ User-specified cutoff of 10e-9
+ used for neglect of 2-electron integrals.
+ A cutoff of 10e-9
+ used for neglect of overlap integrals.
+ Incremental Fock algorithm is on at the start.
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+BrianQC JK build time 1.0e+00 (s)
+    1     -78.3698722682      1.34e-01  
+BrianQC JK build time 0.00e+00 (s)
+    2     -77.9425638025      9.64e-03  
+BrianQC JK build time 0.00e+00 (s)
+    3     -77.9639988646      2.53e-03  
+BrianQC JK build time 0.00e+00 (s)
+    4     -77.9654864220      7.96e-04  
+BrianQC JK build time 0.00e+00 (s)
+    5     -77.9656194199      7.76e-05  
+BrianQC JK build time 0.00e+00 (s)
+    6     -77.9656215988      1.42e-05  
+    7     -77.9656216703      2.37e-06  Convergence criterion met
+ ---------------------------------------
+ SCF time:   CPU 11.31s  wall 2.00s 
+ SCF   energy =   -77.96562167
+ Total energy =   -77.96562167
+ Entering Scaled Opposite Spin MP2
+ NBasAux in rimp2.F =          152
+
+ OS-MP2 job begins now...
+
+ SOS scaling factor =  1.3
+ Form (P|Q)**(-1/2)...
+ 
+ Form (ia|P)...
+ Form BiaQ = (ia|P)*(P|Q)**(-1/2)...
+ Laplace quadrature loop begins
+ Laplace point 1: correlation energy     =        -0.0141861964
+ Laplace point 2: correlation energy     =        -0.0442032176
+ Laplace point 3: correlation energy     =        -0.0754270097
+ Laplace point 4: correlation energy     =        -0.0488287890
+ Laplace point 5: correlation energy     =        -0.0075548194
+ Laplace point 6: correlation energy     =        -0.0002531778
+ Laplace point 7: correlation energy     =        -0.0000003243
+ 
+ Non-Brillouin Singles                   =        -0.0000000000
+ Total OS-MP2 correlation energy         =        -0.1904535342
+ Scaled SOS-MP2 correlation energy       =        -0.2475895944
+ Total SOS-MP2 energy                    =       -78.2132112647
+ 
+ ------------------------------------------------------------------------------
+                     SOSMP2        : Timing summary (seconds)
+ ------------------------------------------------------------------------------
+     job step          cpu (% of tot)      sys (% of tot)     wall (% of tot)
+ ------------------------------------------------------------------------------
+  Form inv (P|Q)    0.2909E+00 (23.3)   0.1000E-04 (20.4)   0.3651E-01 (22.1)
+  Form (ia|P)       0.9093E+00 (72.9)   0.3900E-04 (79.6)   0.1212E+00 (73.3)
+  Form  BiaQ        0.5739E-02 ( 0.5)   0.0000E+00 ( 0.0)   0.9611E-03 ( 0.6)
+  LP orbitals       0.5630E-02 ( 0.5)   0.0000E+00 ( 0.0)   0.9422E-03 ( 0.6)
+  Form  X(PQ)       0.1607E-01 ( 1.3)   0.0000E+00 ( 0.0)   0.2671E-02 ( 1.6)
+  Increment EMP2    0.6055E-02 ( 0.5)   0.0000E+00 ( 0.0)   0.1013E-02 ( 0.6)
+ ------------------------------------------------------------------------------
+   Grand Totals     0.1247E+01          0.4900E-04          0.1653E+00
+ ------------------------------------------------------------------------------
+ 
+ --------------------------------------------------------------
+             Orbital Energies (a.u.) and Symmetries
+ --------------------------------------------------------------
+ 
+ Alpha MOs, Restricted
+ -- Occupied --                  
+-11.233 -11.231  -1.021  -0.785  -0.643  -0.591  -0.508  -0.378
+  1 Ag    1 B3u   2 Ag    2 B3u   1 B2u   3 Ag    1 B1g   1 B1u                
+ -- Virtual --                   
+  0.165   0.206   0.232   0.240   0.305   0.482   0.570   0.615
+  1 B2g   4 Ag    2 B2u   3 B3u   2 B1g   4 B3u   5 Ag    6 Ag                 
+  0.625   0.704   0.753   0.819   0.923   0.932   0.946   1.006
+  3 B2u   2 B1u   5 B3u   2 B2g   6 B3u   7 Ag    4 B2u   3 B1g                
+  1.109   1.310   1.730   1.812   2.120   2.140   2.189   2.333
+  7 B3u   4 B1g   3 B1u   1 B3g   1 Au    8 Ag    5 B2u   9 Ag                 
+  2.507   2.693   2.973   3.044
+  8 B3u   3 B2g   5 B1g   9 B3u                                                
+ 
+ Beta MOs, Restricted
+ -- Occupied --                  
+-11.233 -11.231  -1.021  -0.785  -0.643  -0.591  -0.508  -0.378
+  1 Ag    1 B3u   2 Ag    2 B3u   1 B2u   3 Ag    1 B1g   1 B1u                
+ -- Virtual --                   
+  0.165   0.206   0.232   0.240   0.305   0.482   0.570   0.615
+  1 B2g   4 Ag    2 B2u   3 B3u   2 B1g   4 B3u   5 Ag    6 Ag                 
+  0.625   0.704   0.753   0.819   0.923   0.932   0.946   1.006
+  3 B2u   2 B1u   5 B3u   2 B2g   6 B3u   7 Ag    4 B2u   3 B1g                
+  1.109   1.310   1.730   1.812   2.120   2.140   2.189   2.333
+  7 B3u   4 B1g   3 B1u   1 B3g   1 Au    8 Ag    5 B2u   9 Ag                 
+  2.507   2.693   2.973   3.044
+  8 B3u   3 B2g   5 B1g   9 B3u                                                
+ --------------------------------------------------------------
+ 
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.297929
+      2 C                    -0.297929
+      3 H                     0.148965
+      4 H                     0.148965
+      5 H                     0.148965
+      6 H                     0.148965
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                 0.0000
+    Dipole Moment (Debye)
+         X       0.0000      Y       0.0000      Z      -0.0000
+       Tot       0.0000
+    Quadrupole Moments (Debye-Ang)
+        XX     -12.2622     XY      -0.0000     YY     -12.4680
+        XZ      -0.0000     YZ      -0.0000     ZZ     -15.6631
+    Octopole Moments (Debye-Ang^2)
+       XXX       0.0000    XXY       0.0000    XYY       0.0000
+       YYY       0.0000    XXZ      -0.0000    XYZ      -0.0000
+       YYZ       0.0000    XZZ       0.0000    YZZ       0.0000
+       ZZZ      -0.0000
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX     -67.3930   XXXY      -0.0000   XXYY     -13.3284
+      XYYY      -0.0000   YYYY     -25.9888   XXXZ       0.0000
+      XXYZ      -0.0000   XYYZ      -0.0000   YYYZ      -0.0000
+      XXZZ     -15.0479   XYZZ      -0.0000   YYZZ      -7.8784
+      XZZZ      -0.0000   YZZZ      -0.0000   ZZZZ     -17.8185
+ -----------------------------------------------------------------
+ Total job time:  8.42s(wall), 20.28s(cpu) 
+ Thu May 28 21:15:42 2026
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
+
+ tid: 0x0 [2026.05.28-21:15:42.049] [INFO] Begin brianAPIRelease
+ tid: 0x0 [2026.05.28-21:15:42.244] [INFO] End brianAPIRelease

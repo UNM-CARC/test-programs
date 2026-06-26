@@ -1,0 +1,298 @@
+
+Inactive Modules:
+  1) fftw/3.3.10-qtxc
+
+The following have been reloaded with a version change:
+  1) openmpi/4.1.7-e7k3 => openmpi/4.1.7-762w
+  2) openssh/9.9p1-s5ptbrw => openssh/9.9p1-d4o73h6
+
+                    :-) GROMACS - gmx_mpi, 2026.0-spack (-:
+
+Executable:   /opt/spack/opt/spack/linux-sapphirerapids/gromacs-2026.0-itpuw73l3vunxnrgbhmkfaq5y5nwfa7p/bin/gmx_mpi
+Data prefix:  /opt/spack/opt/spack/linux-sapphirerapids/gromacs-2026.0-itpuw73l3vunxnrgbhmkfaq5y5nwfa7p
+Working dir:  /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/run-2026.0-itpu-500426
+Command line:
+  gmx_mpi --version
+
+GROMACS version:     2026.0-spack
+Precision:           mixed
+Memory model:        64 bit
+MPI library:         MPI
+MPI version:         Open MPI v4.1.7, package: Open MPI tredfear@easley-sn Distribution, ident: 4.1.7, repo rev: v4.1.7, Oct 31, 2024
+OpenMP support:      enabled (GMX_OPENMP_MAX_THREADS = 128)
+GPU support:         disabled
+SIMD instructions:   AVX_512
+CPU FFT library:     fftw-3.3.10-sse2-avx-avx2-avx2_128-avx512
+GPU FFT library:     none
+Multi-GPU FFT:       none
+RDTSCP:              enabled
+TNG support:         enabled
+Hwloc support:       hwloc-2.11.1
+Tracing support:     disabled
+Colvars support:     enabled (version 2025-10-13)
+CP2K support:        disabled
+Torch support:       disabled
+Plumed support:      disabled
+C compiler:          /opt/spack/opt/spack/linux-sapphirerapids/compiler-wrapper-1.0-zj7feeimvjmurvaayiywabofzwv27fyp/libexec/spack/gcc/gcc GNU 14.2.0
+C compiler flags:    -fexcess-precision=fast -funroll-all-loops -march=skylake-avx512 -Wno-missing-field-initializers -O3 -DNDEBUG
+C++ compiler:        /opt/spack/opt/spack/linux-sapphirerapids/compiler-wrapper-1.0-zj7feeimvjmurvaayiywabofzwv27fyp/libexec/spack/gcc/g++ GNU 14.2.0
+C++ compiler flags:  -fexcess-precision=fast -funroll-all-loops -march=skylake-avx512 -Wno-missing-field-initializers -Wno-old-style-cast -Wno-cast-qual -Wno-suggest-override -Wno-suggest-destructor-override -Wno-zero-as-null-pointer-constant -Wno-cast-function-type-strict SHELL:-fopenmp -O3 -DNDEBUG
+BLAS library:        External - user-supplied
+LAPACK library:      External - user-supplied
+
+                  :-) GROMACS - gmx pdb2gmx, 2026.0-spack (-:
+
+Executable:   /opt/spack/opt/spack/linux-sapphirerapids/gromacs-2026.0-itpuw73l3vunxnrgbhmkfaq5y5nwfa7p/bin/gmx_mpi
+Data prefix:  /opt/spack/opt/spack/linux-sapphirerapids/gromacs-2026.0-itpuw73l3vunxnrgbhmkfaq5y5nwfa7p
+Working dir:  /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/run-2026.0-itpu-500426
+Command line:
+  gmx_mpi pdb2gmx -f /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/minimal_peptide.pdb -o processed.gro -p topol.top -i posre.itp -ff charmm36-feb2026_cgenff-5.0 -water tip3p -ignh
+
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/aminoacids.r2b
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/carb.r2b
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/cgenff.r2b
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/ethers.r2b
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/lipid.r2b
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/metals.r2b
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/na.r2b
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/silicates.r2b
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/solvent.r2b
+All occupancies are one
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/atomtypes.atp
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/aminoacids.rtp
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/carb.rtp
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/cgenff.rtp
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/ethers.rtp
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/lipid.rtp
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/metals.rtp
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/na.rtp
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/silicates.rtp
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/solvent.rtp
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/aminoacids.hdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/carb.hdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/cgenff.hdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/ethers.hdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/lipid.hdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/metals.hdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/na.hdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/silicates.hdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/solvent.hdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/aminoacids.n.tdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/carb.n.tdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/cgenff.n.tdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/ethers.n.tdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/lipid.n.tdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/metals.n.tdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/na.n.tdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/silicates.n.tdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/solvent.n.tdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/aminoacids.c.tdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/carb.c.tdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/cgenff.c.tdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/ethers.c.tdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/lipid.c.tdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/metals.c.tdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/na.c.tdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/silicates.c.tdb
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/solvent.c.tdb
+9 out of 9 lines of specbond.dat converted successfully
+Opening force field file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/aminoacids.arn
+Before cleaning: 24 pairs
+Before cleaning: 24 dihedrals
+
+GROMACS reminds you: "Aristotle maintained that women have fewer teeth than men; although he was twice married, it never occurred to him to verify this statement by examining his wives' mouths." (Bertrand Russell)
+
+Using the Charmm36-feb2026_cgenff-5.0 force field in directory /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff
+
+going to rename /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/aminoacids.r2b
+
+going to rename /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/carb.r2b
+
+going to rename /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/cgenff.r2b
+
+going to rename /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/ethers.r2b
+
+going to rename /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/lipid.r2b
+
+going to rename /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/metals.r2b
+
+going to rename /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/na.r2b
+
+going to rename /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/silicates.r2b
+
+going to rename /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/forcefields/charmm36-feb2026_cgenff-5.0.ff/solvent.r2b
+Reading /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/minimal_peptide.pdb...
+Read '', 5 atoms
+
+Analyzing pdb file
+Splitting chemical chains based on TER records or chain id changing.
+
+There are 1 chains and 0 blocks of water and 1 residues with 5 atoms
+
+  chain  #res #atoms
+
+  1 'A'     1      5  
+
+All occupancies are one
+
+Reading residue database... (Charmm36-feb2026_cgenff-5.0)
+
+Preserving residues names by default
+
+Preserving residues names by default
+
+Preserving residues names by default
+
+Preserving residues names by default
+
+Preserving residues names by default
+
+Preserving residues names by default
+
+Preserving residues names by default
+
+Preserving residues names by default
+
+Preserving residues names by default
+
+Processing chain 1 'A' (5 atoms, 1 residues)
+
+Identified residue ALA1 as a starting terminus.
+
+Identified residue ALA1 as a ending terminus.
+Start terminus ALA-1: NH3+
+End terminus ALA-1: COO-
+
+Checking for duplicate atoms....
+
+Generating any missing hydrogen atoms and/or adding termini.
+
+Now there are 1 residues with 13 atoms
+
+Making bonds...
+
+Number of bonds was 12, now 12
+
+Generating angles, dihedrals and pairs...
+
+Making cmap torsions...
+
+There are   24 dihedrals,    1 impropers,   21 angles
+            24 pairs,       12 bonds and     0 virtual sites
+
+Total mass 89.095 a.m.u.
+
+Total charge -0.000 e
+
+Writing topology
+
+Writing coordinate file...
+
+		--------- PLEASE NOTE ------------
+
+You have successfully generated a topology from: /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/minimal_peptide.pdb.
+
+The Charmm36-feb2026_cgenff-5.0 force field and the tip3p water model are used.
+
+		--------- ETON ESAELP ------------
+                  :-) GROMACS - gmx editconf, 2026.0-spack (-:
+
+Executable:   /opt/spack/opt/spack/linux-sapphirerapids/gromacs-2026.0-itpuw73l3vunxnrgbhmkfaq5y5nwfa7p/bin/gmx_mpi
+Data prefix:  /opt/spack/opt/spack/linux-sapphirerapids/gromacs-2026.0-itpuw73l3vunxnrgbhmkfaq5y5nwfa7p
+Working dir:  /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/run-2026.0-itpu-500426
+Command line:
+  gmx_mpi editconf -f processed.gro -o boxed.gro -c -d 1.5 -bt cubic
+
+
+GROMACS reminds you: "Aristotle maintained that women have fewer teeth than men; although he was twice married, it never occurred to him to verify this statement by examining his wives' mouths." (Bertrand Russell)
+
+Note that major changes are planned in future for editconf, to improve usability and utility.
+Read 13 atoms
+Volume: 0.0434212 nm^3, corresponds to roughly 0 electrons
+No velocities found
+    system size :  0.364  0.412  0.290 (nm)
+    diameter    :  0.444               (nm)
+    center      :  0.128  0.010 -0.037 (nm)
+    box vectors :  0.364  0.412  0.290 (nm)
+    box angles  :  90.00  90.00  90.00 (degrees)
+    box volume  :   0.04               (nm^3)
+    shift       :  1.593  1.712  1.759 (nm)
+new center      :  1.722  1.722  1.722 (nm)
+new box vectors :  3.444  3.444  3.444 (nm)
+new box angles  :  90.00  90.00  90.00 (degrees)
+new box volume  :  40.84               (nm^3)
+                   :-) GROMACS - gmx grompp, 2026.0-spack (-:
+
+Executable:   /opt/spack/opt/spack/linux-sapphirerapids/gromacs-2026.0-itpuw73l3vunxnrgbhmkfaq5y5nwfa7p/bin/gmx_mpi
+Data prefix:  /opt/spack/opt/spack/linux-sapphirerapids/gromacs-2026.0-itpuw73l3vunxnrgbhmkfaq5y5nwfa7p
+Working dir:  /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/run-2026.0-itpu-500426
+Command line:
+  gmx_mpi grompp -f /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/minim.mdp -c boxed.gro -p topol.top -o em.tpr -maxwarn 0
+
+Ignoring obsolete mdp entry 'ns_type'
+Generating 1-4 interactions: fudge = 1
+Number of degrees of freedom in T-Coupling group rest is 29.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 1 [file /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/minim.mdp]:
+  The optimal PME mesh load for parallel simulations is below 0.5
+  and for highly parallel simulations between 0.25 and 0.33,
+  for higher performance, increase the cut-off and the PME grid spacing.
+
+
+
+There was 1 NOTE
+
+GROMACS reminds you: "It's Coming Right For Us !" (South Park)
+
+Setting the LD random seed to -477888845
+
+Generated 169542 of the 169653 non-bonded parameter combinations
+
+Generated 118878 of the 169653 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+Analysing residue names:
+There are:     1    Protein residues
+Analysing Protein...
+
+The largest distance between excluded atoms is 0.368 nm between atom 1 and 13
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 32x32x32, spacing 0.108 0.108 0.108
+
+Estimate for the relative computational load of the PME mesh part: 0.99
+
+This run will generate roughly 0 Mb of data
+To request GPUs, add --gpus-per-node X or --gpus X, where X is the desired number of GPUs.
+Job 500426 running on easley[013-014]
+                   :-) GROMACS - gmx mdrun, 2026.0-spack (-:
+
+Executable:   /opt/spack/opt/spack/linux-sapphirerapids/gromacs-2026.0-itpuw73l3vunxnrgbhmkfaq5y5nwfa7p/bin/gmx_mpi
+Data prefix:  /opt/spack/opt/spack/linux-sapphirerapids/gromacs-2026.0-itpuw73l3vunxnrgbhmkfaq5y5nwfa7p
+Working dir:  /carc/scratch/projects/mfricke/mfricke2016402/test-programs/gromacs/run-2026.0-itpu-500426
+Command line:
+  gmx_mpi mdrun -deffnm em -ntomp 8
+
+Reading file em.tpr, VERSION 2026.0-spack (single precision)
+Using 2 MPI processes
+
+Non-default thread affinity set, disabling internal thread affinity
+
+Using 8 OpenMP threads per MPI process
+
+
+Steepest Descents:
+   Tolerance (Fmax)   =  1.00000e+03
+   Number of steps    =           10
+
+writing lowest energy coordinates.
+
+Steepest Descents converged to Fmax < 1000 in 8 steps
+Potential Energy  = -1.8661423e+02
+Maximum force     =  9.8761267e+02 on atom 11
+Norm of force     =  3.9260372e+02
+
+GROMACS reminds you: "It is Lunchtime" (A.R. Van Buuren)
+

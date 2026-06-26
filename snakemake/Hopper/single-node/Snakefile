@@ -1,0 +1,22 @@
+with open("data/step_sizes.txt") as f:
+    STEPS = [line.strip() for line in f if line.strip()]
+
+rule all:
+    input:
+        "results/results_all.txt"
+
+rule calc_pi:
+    output:
+        "results/pi_{steps}.txt"
+    log:
+        "logs/calc_pi_{steps}.log"
+    shell:
+        "python code/calcPiSerial.py {wildcards.steps} > {output} 2> {log}"
+
+rule concatenate_results:
+    input:
+        expand("results/pi_{steps}.txt", steps=STEPS)
+    output:
+        "results/results_all.txt"
+    shell:
+        "cat {input} > {output}"
